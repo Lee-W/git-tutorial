@@ -1,11 +1,11 @@
-# reveal.js template
-My reveal.js template
+# Git and Github Tutorial
+Tutorial for git and github
 
 ## Clone
 
 ```sh
-git clone --recursive https://github.com/Lee-W/reveal.js-template
+git clone --recursive https://github.com/Lee-W/git-and-github-tutorial
 ```
 
 ## Reference
-[reveal.js readme](https://github.com/hakimel/reveal.js/blob/master/README.md)
+[reveal.js readme](https://github.com/Lee-W/git-and-github-tutorial)
