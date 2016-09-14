@@ -1,0 +1,42 @@
+<section id="ignore-file">
+  <h2>Ignore File</h2>
+  <ul>
+    <li>有時候，有些檔案不想被加入git追蹤該怎麼辦？</li>
+    <li class="nest-list">
+      <ul>
+        <li>那就忽略它吧！</li>
+        <li>
+          通常會ignore有機密資料的檔案或暫存檔
+          <pre><code class="sh" data-trim>
+echo "filename" &gt; .gitignore
+          </code></pre>
+        </li>
+      </ul>
+    </li>
+    <li style="color: red">.gitignore不用也不能加./在檔案名稱前面</li>
+    <li style="color: red">這方法只適用在還沒加入追蹤的檔案</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Ignore File</h2>
+  那如果想忽略的檔案已經被加入git追蹤怎麼辦？
+  <p class="fragment">
+    先將他從版本庫移除
+  </p>
+  <pre class="fragment"><code>
+git rm --cache "file name"
+  </code></pre>
+  <p class="fragment">
+    接著再做一次上一頁的步驟，就可以ignore了
+  </p>
+</section>
+
+<section>
+  <h2>Ignore File</h2>
+  <a href="https://www.gitignore.io" target="_blank">gitignore.io</a>提供了不同語言.gitignore範本
+  <br />
+  透過<a href="https://github.com/tj/git-extras" target="_blank">git-extras</a>的<a href="https://github.com/tj/git-extras/blob/master/Commands.md#git-ignore-io" target="_blank">git ignore-io</a>可以直接從命令列取得範本
+  <br />
+  另外它的<a href="https://github.com/tj/git-extras/blob/master/Commands.md#git-ignore-io" target="_blank">git ignore</a>，也能讓ignore file這件事更輕鬆
+</section>

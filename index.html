@@ -54,7 +54,9 @@
             <li><a href="#/setup">Setup</a></li>
             <li><a href="#/quickstart">Quick Start</a></li>
             <li><a href="#/commit">Commit</a></li>
-            <li><a href="#/restore">restore</a></li>
+            <li><a href="#/restore">Restore</a></li>
+            <li><a href="#/ignore-file">Ignore File</a></li>
+
           </ul>
 				</section>
 
@@ -74,6 +76,27 @@
         </section>
 
         <section data-external="content/restore.html">
+        </section>
+
+        <section data-external="content/ignore_file.html">
+        </section>
+
+        <section>
+          <h2>Rename(move) and Delete Files</h2>
+          <ul>
+            <li>
+              刪除已經被加入git追蹤的檔案
+              <pre><code class="sh" data-trim>
+git rm "filename"
+              </code></pre>
+            </li>
+            <li>
+              重新命名或移動位置
+              <pre><code class="sh" data-trim>
+git mv "original file name" "new file name"
+              </code></pre>
+            </li>
+          </ul>
         </section>
 
         <section data-external="content/branch.html">
