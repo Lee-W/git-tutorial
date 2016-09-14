@@ -4,9 +4,13 @@
 }
 
 .contact-me {
-	float:center;	
+	float:center;
 }
 
 .reference li {
 	font-size: 16pt;
+}
+
+.nest-list {
+    list-style-type: None;
 }

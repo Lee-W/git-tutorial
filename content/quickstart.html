@@ -76,14 +76,14 @@ git st
 </section>
 
 <section>
-  <h2>Stage - staged</h2>
+  <h2>Stage 3 - staged</h2>
 
   所有的東西目前都已經加入git (因為根本就還沒有東西)
   <img src="img/3_st.png" alt="st"/>
 </section>
 
 <section>
-  <h2>Stage - untracked</h2>
+  <h2>Stage 0 - untracked</h2>
 
   <ul>
     <li>建立一個檔案叫hi.txt</li>
@@ -93,7 +93,7 @@ git st
 </section>
 
 <section>
-  <h2>Stage - unmodified</h2>
+  <h2>Stage 1 - unmodified</h2>
   將新的檔案加入git
 
   <pre><code class="sh" data-trim>
@@ -104,14 +104,14 @@ git add "file name"
 </section>
 
 <section>
-  <h2>Stage - untracked</h2>
+  <h2>Stage 1 - untracked</h2>
 
   如果一次要加入很多檔案怎麼辦？
   <img src="img/6_st4.png" alt="st4"/>
 </section>
 
 <section>
-  <h2>Stage - unmodified</h2>
+  <h2>Stage 1 - unmodified</h2>
 
   <pre><code class="sh" data-trim>
 git add .
@@ -126,7 +126,7 @@ git add .
 </section>
 
 <section>
-  <h2>Stage - staged</h2>
+  <h2>Stage 3 - staged</h2>
   <small>讓剛剛的檔案進入staged階段吧，之後這個檔案就會一直被記錄在git</small>
 
   <pre><code class="sh" data-trim>
@@ -140,4 +140,31 @@ git commit
   <pre><code class="sh" data-trim>
 git config --global core.editor=vim
   </code></pre>
+</section>
+
+<section>
+  <h2>Log</h2>
+  既然檔案已經進入紀錄
+  <br />
+  讓我們來查看之前的紀錄
+  <pre><code class="sh" data-trim>
+git log
+  </code></pre>
+  <img src="img/11_log.png" alt="log"/>
+</section>
+
+<section>
+  <h2>Stage 2 - modified</h2>
+  如果修改了add或commit的檔案，就會變成這樣
+  <img src="img/12_st6.png" alt="st6"/>
+  <br />
+  這時候只要在用git add，加入紀錄就好了
+</section>
+
+<section>
+  <h2>Stage</h2>
+  <ul>
+    <li>新增檔案 &#8594; 加入track (git add) &#8594; 提交(git commit) &#8594; 繼續加入其他檔案</li>
+    <li>修改檔案 &#8594; 加入stage (git add) &#8594; 提交(git commit) &#8594; 繼續修改其他檔案</li>
+  </ul>
 </section>
