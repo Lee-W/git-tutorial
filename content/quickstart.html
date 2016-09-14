@@ -1,0 +1,143 @@
+<section id="quickstart">
+  <h2>Quick Start</h2>
+</section>
+
+<section>
+  <h2>Create a local repo</h2>
+
+  <ul>
+    <li>什麼是repo?</li>
+    <ul>
+      <li>repository，git都是這麼稱呼它的版本庫</li>
+      <li>可以把它想成就是你要加入版本控制的專案</li>
+    </ul>
+    <br />
+    <li>初始一個git專案(讓這個資料夾被git記錄)</li>
+  </ul>
+    <pre><code class="sh" data-trim>
+git init "path"
+    </code></pre>
+    如果不輸入path，就會初始在目前所在的資料夾
+</section>
+
+<section>
+  <h2>Create a local repo</h2>
+  <img src="img/2_init.png" alt="init"/>
+
+  <small>
+    <ul>
+      <li>.git</li>
+      <ul>
+        <li>記錄git所有的操作</li>
+        <li>裡面都是一般的file，沒有daemon或背景作業</li>
+        <li>建議沒事就不要去動它了</li>
+        <li style="color: red">絕對不要對他rm -rf .git，不然git的紀錄就會全部不見</li>
+      </ul>
+      <li>master</li>
+      <ul>
+        <li>master是目前所在分支的名稱，分支的概念會在以後的章節提到</li>
+        <li>至於在terminal顯示分之名稱，則是<a href="https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme" target="_blank">oh-my-zsh-powerline-theme</a>的功能</li>
+      </ul>
+    </ul>
+  </small>
+</section>
+
+<section>
+  <h2>Stage</h2>
+
+  看到現在專案中各個檔案的狀態
+  <pre><code class="sh" data-trim>
+git status
+  </code></pre>
+
+  不過我們已經透過alias把status設為st了，所以可以直接用
+  <pre><code class="sh" data-trim>
+git st
+  </code></pre>
+
+  那麼接下來要介紹git很重要的四個stage
+</section>
+
+<section>
+  <h2>Stage</h2>
+
+  總共分成4個stage
+  <br />
+  <br />
+  <ol start=0>
+    <li><p style="display: inline; color: red">untracked</p> (新的檔案，還沒加入git中)</li>
+    <li><p style="display: inline; color: green">unmodified</p> (完成add，但還沒commit)</li>
+    <li><p style="display: inline; color: red">modified</p> (add完後又做了修改)</li>
+    <li><p style="display: inline; color: green">staged</p> (commit完成，到了這個階段就已經完成紀錄)</li>
+  </ol>
+  <br />
+  <br />
+  接下來會介紹什麼是add和commit
+</section>
+
+<section>
+  <h2>Stage - staged</h2>
+
+  所有的東西目前都已經加入git (因為根本就還沒有東西)
+  <img src="img/3_st.png" alt="st"/>
+</section>
+
+<section>
+  <h2>Stage - untracked</h2>
+
+  <ul>
+    <li>建立一個檔案叫hi.txt</li>
+    <li>現在有一個檔案進入untracked</li>
+  </ul>
+  <img src="img/4_st2.png" alt="st2"/>
+</section>
+
+<section>
+  <h2>Stage - unmodified</h2>
+  將新的檔案加入git
+
+  <pre><code class="sh" data-trim>
+git add "file name"
+  </code></pre>
+
+  <img src="img/5_st3.png" alt="st3"/>
+</section>
+
+<section>
+  <h2>Stage - untracked</h2>
+
+  如果一次要加入很多檔案怎麼辦？
+  <img src="img/6_st4.png" alt="st4"/>
+</section>
+
+<section>
+  <h2>Stage - unmodified</h2>
+
+  <pre><code class="sh" data-trim>
+git add .
+  </code></pre>
+
+  <img src="img/7_st5.png" alt="st5" width="80%"/>
+  <small>
+    不過一般建議還是一個一個檔案add比較好
+    <br />
+    避免add到錯誤的檔案
+  </small>
+</section>
+
+<section>
+  <h2>Stage - staged</h2>
+  <small>讓剛剛的檔案進入staged階段吧，之後這個檔案就會一直被記錄在git</small>
+
+  <pre><code class="sh" data-trim>
+git commit
+  </code></pre>
+
+  <small>接著會進入編輯器，讓你輸入commit</small>
+  <img src="img/8_commit.png" alt="commit" width="80%"/>
+
+  <small>預設的編輯器通常不是vi，可以透過這個指令設定</small>
+  <pre><code class="sh" data-trim>
+git config --global core.editor=vim
+  </code></pre>
+</section>
