@@ -68,6 +68,7 @@
               </td>
               <td style="vertical-align: top">
                 <ul>
+                  <li><a href="#/more-log">More about log</a></li>
                   <li><a href="#/stash">Stash</a></li>
                   <li><a href="#/rebase">Rebase</a></li>
                   <li><a href="#/submodule">Submodule</a></li>
@@ -93,7 +94,51 @@
         <section data-external="content/commit.html">
         </section>
 
-        <section data-external="content/diff.html">
+        <section id="diff">
+          <section>
+            <h2>diff</h2>
+            在進入restore之前
+            <br />
+            我們當然要知道如何在不同的紀錄間做比較
+          </section>
+          <section>
+            <h2>diff</h2>
+
+            看"target"和上一次commit的不同
+            <pre><code class="sh" data-trim>
+          git diff "target"
+            </code></pre>
+
+            常見的target有
+            <br />
+            <ul>
+              <li>"SHA1": 與SHA1碼對應的commit</li>
+              <li>master~1: master的前兩次commit</li>
+              <li>master^: 等效master~1</li>
+              <li>master^^: 等效master~2</li>
+            </ul>
+            <br />
+          </section>
+
+          <section>
+            <h2>diff</h2>
+            從a到b的改變
+            <pre><code class="sh" data-trim>
+          git diff a b
+            </code></pre>
+
+            看modified的檔案和上一次commit的不同
+            <pre><code class="sh" data-trim>
+          git diff
+            </code></pre>
+
+            看added的檔案和上一次commit的不同
+
+            <pre><code class="sh" data-trim>
+          git diff --staged
+            </code></pre>
+
+          </section>
         </section>
 
         <section data-external="content/restore.html">
@@ -127,6 +172,68 @@ git mv "original file name" "new file name"
         </section>
 
         <section data-external="content/remote.html">
+        </section>
+
+        <section id="more-log">
+          <section>
+            <h2>log</h2>
+            現在線圖比較複雜了
+            <br />
+            就可以加入更多的工具來協助我們看git log
+          </section>
+
+          <section>
+            <h2>log</h2>
+            <pre><code class="sh" data-trim>
+git log --decorate
+            </code></pre>
+            <img src="img/37_log.png" alt="log"/>
+            <br />
+            標記各個指標目前所指向的位置
+          </section>
+
+          <section>
+            <h2>log</h2>
+            <pre><code class="sh" data-trim>
+git log --all
+            </code></pre>
+            <img src="img/38_log2.png" alt="log2"/>
+            <br />
+            列出所有分支的log
+            <br />
+            上面的是master上的
+            <br />
+            下面則是原本my-branch分支上的commit
+          </section>
+
+          <section>
+            <h2>log</h2>
+            <pre><code class="sh" data-trim>
+git log --graph
+            </code></pre>
+            <img src="img/39_log3.png" alt="log3"/>
+            <br />
+            在log旁邊加上輔助線，更清楚看分支的狀況
+          </section>
+
+          <section>
+            <h2>log</h2>
+            <small>
+              同時使用--graph, --all, --decorate就能看到我在branch章節用來解說用的結果
+              <br />
+              <img src="img/25_branch3.png" alt="log-3-argument"/>
+              <br />
+              <br />
+              也可以直接將這些參數alias到簡單的指令讓下次使用更輕鬆
+              <br />
+              e.g.
+            </small>
+            <pre>
+              <code class="sh" data-trim>
+git config --global alias.lg "log --grpah --decorate --all"
+              </code>
+            </pre>
+          </section>
         </section>
 
         <section data-external="content/stash.html">
