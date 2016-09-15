@@ -166,7 +166,41 @@ git mv "original file name" "new file name"
         <section data-external="content/branch.html">
         </section>
 
-        <section data-external="content/tag.html">
+        <section>
+          <section id="tag">
+            <h2>tag</h2>
+            一般而言，可以拿來做標記發行的版本
+            <br />
+            或者也可以想成是標記特別重要的commit
+          </section>
+          <section>
+            <h2>tag</h2>
+            <ul>
+              <li>
+                在現在的commit上，建立一個tag
+                <pre><code class="sh" data-trim>
+git tag -a "tag name"
+                </code></pre>
+              </li>
+
+              <li>
+                列出所有的tag
+                <pre><code class="sh" data-trim>
+git tag
+                </code></pre>
+              </li>
+
+              <li>觀看某一個tag的詳細資訊
+                <pre><code class="sh" data-trim>
+git show "tag name"
+              </code></pre>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>tag</h2>
+            <img src="img/40_tag.png" alt="tag"/>
+          </section>
         </section>
 
         <section data-external="content/remote.html">
