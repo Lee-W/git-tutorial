@@ -6,15 +6,16 @@
   <h2>Create a local repo</h2>
 
   <ul>
-    <li>什麼是repo?</li>
-    <li class="nest-list">
+    <li>什麼是repo?
       <ul>
         <li>repository，git都是這麼稱呼它的版本庫</li>
         <li>可以把它想成就是你要加入版本控制的專案</li>
       </ul>
     </li>
-    <li class="nest-list"><br /></li>
-    <li>初始一個git專案(讓這個資料夾被git記錄)</li>
+    <li>
+      <br />
+      初始一個git專案(讓這個資料夾被git記錄)
+    </li>
   </ul>
     <pre><code class="sh" data-trim>
 git init "path"
@@ -27,8 +28,7 @@ git init "path"
   <img src="img/2_init.png" alt="init"/>
 
     <ul style="font-size: 20px">
-      <li>.git</li>
-      <li class="nest-list">
+      <li>.git
         <ul>
           <li>記錄git所有的操作</li>
           <li>裡面都是一般的file，沒有daemon或背景作業</li>
@@ -36,8 +36,7 @@ git init "path"
           <li style="color: red">絕對不要對他rm -rf .git，不然git的紀錄就會全部不見</li>
         </ul>
       </li>
-      <li>master</li>
-      <li class="nest-list">
+      <li>master
         <ul>
           <li>master是目前所在分支的名稱，分支的概念會在以後的章節提到</li>
           <li>至於在terminal顯示分之名稱，則是<a href="https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme" target="_blank">oh-my-zsh-powerline-theme</a>的功能</li>
