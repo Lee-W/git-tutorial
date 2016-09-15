@@ -11,7 +11,7 @@
     <li>也可以想像是解支線任務
       <ul>
         <li>切出不同的支線解不同的任務，每一個支線都能有自己的存檔</li>
-        <li>最後再整併成主線的一部份</li>
+        <li>最後再整併成主線的一部份(也可以不整併)</li>
       </ul>
     </li>
   </ul>
@@ -23,7 +23,7 @@
   <pre><code class="sh" data-trim>
 git branch "branch name"
   </code></pre>
-  <small>創造分支後，還會在原本的分支上，必須用下面的方法切換到新的分支上</small>
+  <small>創造分支後，我們依然會留在原本的分支上，必須用下面的方法切換到新的分支上</small>
   <br />
   切換到另一個分支
   <pre><code class="sh" data-trim>
@@ -58,7 +58,7 @@ git checkout -b "branch_name"
     <br />
     後面的master和my-branch就是我們的分支
     <br />
-    而我們的這個分支目前是指向4f03e7a...這個commit上
+    而我們的這個分支目前都是指向4f03e7a...這個commit上
   </p>
 </section>
 
@@ -148,21 +148,22 @@ git branch -D "branch name"
   <p class="fragment">
     來看一下現在status長怎樣
     <br />
-    <img src="img/29_branch7.png" alt="branch7"/>
+    <img src="img/29_branch7.png" alt="branch7" width="50%"/>
+    <br />
+    <small>
+      git 已經幫我們判斷其他檔案並沒有衝突
+      <br />
+      只剩下hi.txt有無法被演算法整併的內容
+    </small>
   </p>
 </section>
 
 <section>
   <h2>Merge</h2>
   <small>
-    git 已經幫我們判斷其他檔案並沒有衝突
-    <br />
-    只剩下hi.txt有無法被演算法整併的內容
-    <br />
-    <br />
     這時候打開hi.txt，git會標示哪裡是哪個branch的內容
     <br />
-  <img src="img/30_branch8.png" alt="branch8"/>
+    <img src="img/30_branch8.png" alt="branch8"/>
     <br />
     從HEAD到===的內容就是HEAD(目前指向master)的內容
     <br />
@@ -172,7 +173,7 @@ git branch -D "branch name"
 
 <section>
   <h2>Merge</h2>
-  留下想要的內容，add hi.txt並commit後
+  留下想要的內容，add並commit後
   <br />
   就可以看到兩條分支已經整併在一起
   <br />

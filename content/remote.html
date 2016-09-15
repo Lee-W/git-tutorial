@@ -2,7 +2,8 @@
   <h2>Remote</h2>
   既然要能跟別人協作
   <br />
-  當然要能丟上遠端
+  當然要能把repo丟上遠端
+  <br />
   <br />
   接下來會以github作為例子
 </section>
@@ -53,17 +54,12 @@ git push -u origin master
   <pre><code class="sh" data-trim>
 git remote add "remote-name" "remote url"
   </code></pre>
-
-  <small>
-    上一頁的origin就是remote name
-    <br />
-    remote url則是https://github.com/Lee-W/Git-Tutorial-Sample.git
-    <br />
-    <br />
-    origin只是預設的remote name並沒有強制一定要存在
-    <br />
-    一個專案也有可能有超過一個remote
-  </small>
+  <ul style="font-size: 24px">
+    <li>上一頁的origin就是remote name</li>
+    <li>remote url則是https://github.com/Lee-W/Git-Tutorial-Sample.git</li>
+    <li>origin只是預設的remote name，並沒有強制一定要存在</li>
+    <li>一個專案也有可能有超過一個remote</li>
+  </ul>
 </section>
 
 <section>
@@ -90,7 +86,7 @@ git push -u "remote name" "branch name"
   <br />
   <br />
   <small class="fragment">
-    接著就可以用git branch --all看到遠端的master分支
+    接著用git branch --all可以看到遠端的master分支已經存在了
     <img src="img/35_remote4.png" alt="remote4"/>
   </small>
 </section>
@@ -120,7 +116,7 @@ git config --global credential.helper cache
     <br />
     如果cache改成store就可以永遠記住
     <br />
-    不過需要注意的是，這個動作會讓帳號密碼以明碼的方式記錄在~/.git-credentials
+    不過需要注意的是，store會將帳號密碼以明碼記錄在~/.git-credentials
     <br />
     因此不建議使用store
   </small>
@@ -133,8 +129,8 @@ git config --global credential.helper cache
     <li>README.md
       <ul>
         <li>說明你的專案該如何使用</li>
-        <li>github會自動去找readme，README等字眼</li>
         <li>以markdown語法攥寫</li>
+        <li>Github會自動去找readme，README等字眼，並建立出對應的說明文件</li>
         <li>Github自己有一套Github Favored Markdown</li>
       </ul>
     </li>
@@ -154,7 +150,7 @@ git config --global credential.helper cache
 
 <section>
   <h2>Clone</h2>
-  那麼上傳上去，其他人又應該如何下載下來呢
+  那麼上傳上去的專案，其他人又應該如何下載下來呢
 
   <pre><code class="sh" data-trim>
 git clone "repo url"
@@ -181,12 +177,12 @@ git pull "remote name" "branch name"
     <br />
     並不會像pull一樣處理merge的動作
     <br />
-    <img src="img/36_remote5.png" alt="remote5" width="50%"/>
+    <img src="img/36_remote5.png" alt="remote5" width="70%"/>
   </small>
   <small class="fragment">
-    <img src="img/37_remote6.png" alt="remote6" width="50%"/>
+    <img src="img/37_remote6.png" alt="remote6" width="70%"/>
     <br />
-    因為我們並沒有多做修改，master跟origin/master都是指像同樣的地方
+    因為我們並沒有做修改，master跟origin/master都是指像同樣的地方
   </small>
 </section>
 

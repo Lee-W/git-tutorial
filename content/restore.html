@@ -23,14 +23,14 @@ git reset "file name"
   <h2>Restore</h2>
   <small>經過了多次commit，如果想回到很久以前的版本該怎麼辦？</small>
   <pre><code class="sh" data-trim>
-git reset "可被辨識的commit SHA"
+git reset "可被辨識的commit SHA1"
   </code></pre>
   <p style="font-size: 20px">
-    commit後面那串就是每個commit自己的SHA
+    commit後面那串就是每個commit自己的SHA1
     <br />
     一般來說只要前四碼就足夠git辨別是不同的commit
     <br />
-    目前用到最長的是Linux Kernel，也只用到了前12碼
+    目前聽過用到最長的是Linux Kernel，也只用到了前12碼
   </p>
   <img src="img/13_reset.png" alt="reset" width="40%"/>
 </section>
@@ -50,11 +50,13 @@ git reset "可被辨識的commit SHA"
     </tr>
   </table>
   <p style="font-size: 20px">
-    這個時候並不是回復到第一次commit的狀態，所有檔案的內容還是跟reset前一樣
+    reset後並不是直接回到到第一次commit的狀態
     <br />
-    只是commit的紀錄回到了第一個commit
+    所有檔案的內容還是跟reset前一樣
     <br />
-    這時候要git checkout hi2.txt
+    只是commit的紀錄回到了第一個commit (只是把存檔點往前移)
+    <br />
+    這時候要git checkout hi2.txt (執行回到存檔點的動作)
     <br />
     才會回朔到第一次commit時，hi2.txt的狀態
   </p>
@@ -62,12 +64,12 @@ git reset "可被辨識的commit SHA"
 
 <section>
   <h2>Restore</h2>
-  上一頁所提的是soft reset只會把commit往前回朔
+  上一頁所提的是soft reset，只會把commit往前回朔
   <br />
   如果要連內容一起直接回朔
   <br />
   <pre><code class="sh" data-trim>
-git reset --HARD "可被辨識的commit SHA"
+git reset --HARD "可被辨識的commit SHA1"
   </code></pre>
 </section>
 
@@ -94,9 +96,9 @@ git reflog
 <section>
   <h2>Restore</h2>
   <ul>
-    <li>這些長長的SHA碼，看了就覺得煩啊
+    <li>這些長長的SHA1碼，看了就覺得煩啊
+    <li>git使用一些代號來表示前n次的commit
       <ul>
-        <li>git使用一些代號來表示前n次的commit</li>
         <li>HEAD: 最近一次的commit</li>
         <li>HEAD~1: 前兩次的commit</li>
         <li>HEAD~n: 前n+1次的commit</li>
@@ -111,20 +113,16 @@ git reset HEAD~n
 
 <section>
   <h2>Restore</h2>
-  <ul>
-    <li>
-      只想讓某個檔案回到之前的狀態？
-      <pre><code>
+  只想讓某個檔案回到之前的狀態？
+  <pre><code>
 git reset HEAD~n "file name"
-      </code></pre>
-      <small>只要再對這個檔案進行checkout就會回到目前commit完成的狀態</small>
-    </li>
+  </code></pre>
+  <small>只要再對這個檔案進行checkout就會回到目前commit完成的狀態</small>
+
+  <ul style="font-size: 24px">
+    <li>soft reset並不會改變你現在存在的檔案的狀態，改變的是上一次commit指向的位址</li>
+    <li>checkout才能把現在的檔案回復到之前的狀態</li>
   </ul>
-  <p style="font-size: 24px">
-    soft reset並不會改變你現在存在的檔案的狀態，改變的是上一次commit指向的位址
-    <br />
-    checkout才能把現在的檔案回復到之前的狀態
-  </p>
 
   <p class="fragment">???...</p>
   <p class="fragment">沒關係，看看下一頁的例子吧</p>
@@ -134,14 +132,17 @@ git reset HEAD~n "file name"
   <h2>reset vs checkout</h2>
   <table class="reveal">
     <tr>
-      <td><img src="img/18_reset4.png" alt="reset4"/></td>
+      <td>
+        <img src="img/18_reset4.png" alt="reset4"/>
+        <small>這是git log現在的內容</small>
+      </td>
       <td>
         <img src="img/19_reset5.png" alt="reset5"/>
-        <p style="font-size: 20px">
-          上面的echo結果是第三次hi.txt的內容
+        <small>
+          上面cat的結果是第三次commit後hi.txt的內容
           <br />
-          下面則是第一次hi.txt的內容
-        </p>
+          下面則是第一次commit後hi.txt的內容
+        </small>
       </td>
     </tr>
   </table>

@@ -97,13 +97,13 @@
         <section id="diff">
           <section>
             <h2>diff</h2>
-            在進入restore之前
+            在進入回朔之前
             <br />
-            我們當然要知道如何在不同的紀錄間做比較
+            我們必須要知道如何在不同的紀錄間做比較
           </section>
+
           <section>
             <h2>diff</h2>
-
             看"target"和上一次commit的不同
             <pre><code class="sh" data-trim>
           git diff "target"
@@ -122,7 +122,7 @@
 
           <section>
             <h2>diff</h2>
-            從a到b的改變
+            看從a到b的改變
             <pre><code class="sh" data-trim>
           git diff a b
             </code></pre>
@@ -132,12 +132,10 @@
           git diff
             </code></pre>
 
-            看added的檔案和上一次commit的不同
-
+            看unmodified的檔案和上一次commit的不同
             <pre><code class="sh" data-trim>
           git diff --staged
             </code></pre>
-
           </section>
         </section>
 

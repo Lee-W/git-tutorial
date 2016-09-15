@@ -39,3 +39,20 @@ git rm --cache "file name"
   <br />
   另外它的<a href="https://github.com/tj/git-extras/blob/master/Commands.md#git-ignore-io" target="_blank">git ignore</a>，也能讓ignore file這件事更輕鬆
 </section>
+
+<section>
+  <h2>Ignore File</h2>
+  <small>
+    有一些file是每個專案都要忽略的，像是vim的暫存檔.swp等檔案
+    <br />
+    如果每一次都要重新輸入就太麻煩了
+    <br />
+    這時候就能設定一個global的.gitignore (e.g. ~/.gitignore_global)
+    <br />
+    然後把這個設定寫進git的config
+  </small>
+  <br />
+  <pre><code class="sh" data-trim>
+git config --global core.excludesfile "path to global gitignore"
+  </code></pre>
+</section>
