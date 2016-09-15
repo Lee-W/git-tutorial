@@ -1,0 +1,195 @@
+<section id="branch">
+  <h2>Branch</h2>
+
+  <ul>
+    <li>Branch是git很重要的功能</li>
+    <li class="nest-list">
+      <ul>
+        <li>想像成複製很多份同樣的code，各自做不同的修改</li>
+        <li>通常可以用在測試或攥寫新功能的時候</li>
+      </ul>
+    </li>
+    <li>也可以想像是解支線任務</li>
+    <li class="nest-list">
+      <ul>
+        <li>切出不同的支線解不同的任務，每一個支線都能有自己的存檔</li>
+        <li>最後再整併成主線的一部份</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Branch</h2>
+  創造一個新的分支 (名稱自訂)
+  <pre><code class="sh" data-trim>
+git branch "branch name"
+  </code></pre>
+  <small>創造分支後，還會在原本的分支上，必須用下面的方法切換到新的分支上</small>
+  <br />
+  切換到另一個分支
+  <pre><code class="sh" data-trim>
+git checkout "branch name"
+  </code></pre>
+  <br />
+  一個指令做到上面兩個步驟
+  <pre><code class="sh" data-trim>
+git checkout -b "branch_name"
+  </code></pre>
+</section>
+
+<section>
+  <h2>What actually is branch?</h2>
+  <p style="font-size: 20px">
+    branch並不是真正的copy，比較像是一個書籤
+    <br />
+    它只是一個指到某一個commit
+    <br />
+    實際上git還是以這些sha碼來辨別該到哪一個紀錄
+  </p>
+
+  <img src="img/23_branch.png" alt="branch"
+  class="fragment fade-out" data-fragment-index="0"
+  style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;"/>
+
+  <img src="img/24_branch2.png" alt="branch2" width="50%"
+  class="fragment fade-in" data-fragment-index="0"/>
+
+  <p class="fragment" style="font-size: 20px">
+    HEAD指的是目前commit所指向的位置
+    <br />
+    後面的master和my-branch就是我們的分支
+    <br />
+    而我們的這個分支目前是指向4f03e7a...這個commit上
+  </p>
+</section>
+
+<section>
+  <h2>Branch</h2>
+  <p style="font-size: 20px">
+    我們在my-branch跟master上都做了修改，並分別commit後
+    <br />
+    就能比較明確看出分支的效果
+  </p>
+  <img src="img/25_branch3.png" alt="branch3" class="fragment"/>
+  <p style="font-size: 20px" class="fragment">
+    這時候就可以看到master跟branch指向不同的commit
+    <br />
+    也不再是同一條線上
+  </p>
+</section>
+
+<section>
+  <h2>Branch</h2>
+  實際上在git中，並沒有所謂的主線
+  <br />
+  master只是預設的branch名稱
+  <br />
+  一個專案即使沒有master也是沒問題的
+  <br />
+  定義一條branch為主線只是為了方便開發
+</section>
+
+<section>
+  <h2>Merge</h2>
+    既然在不同的branch上有了不同的修改
+    <br />
+    我們就可以來談，該怎麼整併在一起
+</section>
+
+<section>
+  <h2>Merge</h2>
+  <ul>
+    <li>
+      將另一個branch合併到現在的branch
+      <pre><code class="sh" data-trim>
+git merge "branch name"
+      </code></pre>
+      <small>通常會在branch修改完並commit後，切換到master才merge</small>
+    </li>
+    <li>
+      之後就能把合併完的branch刪掉
+      <pre><code class="sh" data-trim>
+git branch -d "branch name"
+      </code></pre>
+    </li>
+    <li>
+      如果想強制刪掉還沒merge的branch
+      <pre><code class="sh" data-trim>
+git branch -D "branch name"
+      </code></pre>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Merge</h2>
+  我們來看一下master跟my-branch的內容分別是什麼
+  <table class="reveal">
+    <tr>
+      <td>
+        <img src="img/26_branch4.png" alt="branch4"/>
+      </td>
+      <td>
+        <img src="img/27_branch5.png" alt="branch5"/>
+      </td>
+    </tr>
+  </table>
+  <p class="fragment">
+    完全不同的內容，git會怎麼處理呢？
+  </p>
+</section>
+
+<section>
+  <h2>Merge</h2>
+  <img src="img/28_branch6.png" alt="branch6"/>
+  <br />
+  這時候merge，git就會告訴你內容有衝突
+  <br />
+  <br />
+  <p class="fragment">
+    來看一下現在status長怎樣
+    <br />
+    <img src="img/29_branch7.png" alt="branch7"/>
+  </p>
+</section>
+
+<section>
+  <h2>Merge</h2>
+  <small>
+    git 已經幫我們判斷其他檔案並沒有衝突
+    <br />
+    只剩下hi.txt有無法被演算法整併的內容
+    <br />
+    <br />
+    這時候打開hi.txt，git會標示哪裡是哪個branch的內容
+    <br />
+  <img src="img/30_branch8.png" alt="branch8"/>
+    <br />
+    從HEAD到===的內容就是HEAD(目前指向master)的內容
+    <br />
+    下面則是my-branch的內容
+  </small>
+</section>
+
+<section>
+  <h2>Merge</h2>
+  留下想要的內容，add hi.txt並commit後
+  <br />
+  就可以看到兩條分支已經整併在一起
+  <br />
+  <img src="img/31_branch9.png" alt="branch9" width="60%"/>
+</section>
+
+<section>
+  <h3>Rename branch</h3>
+  <small>重新命名分支</small>
+  <pre><code class="sh" data-trim>
+git branch -m "oldname" "newname"
+  </code></pre>
+  <br />
+  <small>如果是要重新命名現在所在的分支，則可以省略原本的名稱</small>
+  <pre><code class="sh" data-trim>
+git branch -m "newname"
+  </code></pre>
+</section>
