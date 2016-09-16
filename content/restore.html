@@ -16,23 +16,23 @@ git reset "file name"
   <h2>Restore</h2>
   <small>經過了多次commit，如果想回到很久以前的版本該怎麼辦？</small>
   <br />
-  <img src="img/13_reset.png" alt="reset"/>
-</section>
+  <div class="fragment fade-out absolute-pos-fragment" data-fragment-index="0">
+    <img src="img/13_reset.png" alt="reset"/>
+  </div>
 
-<section>
-  <h2>Restore</h2>
-  <small>經過了多次commit，如果想回到很久以前的版本該怎麼辦？</small>
-  <pre><code class="sh" data-trim>
-git reset "可被辨識的commit SHA1"
-  </code></pre>
-  <p style="font-size: 20px">
-    commit後面那串就是每個commit自己的SHA1
+  <div class="fragment fade-in absolute-pos-fragment" data-fragment-index="0">
+    <pre><code class="sh" data-trim>
+git reset "可被辨識的commit SHA1碼"
+    </code></pre>
+
+    <small>
+      commit後面那串就是每個commit自己的SHA1<br />
+      一般來說只要前四碼就足夠git辨別是不同的commit<br />
+      目前聽過用到最長的是Linux Kernel，也只用到了前12碼
+    </small>
     <br />
-    一般來說只要前四碼就足夠git辨別是不同的commit
-    <br />
-    目前聽過用到最長的是Linux Kernel，也只用到了前12碼
-  </p>
-  <img src="img/13_reset.png" alt="reset" width="40%"/>
+    <img src="img/13_reset.png" alt="reset" width="40%"/>
+  </div>
 </section>
 
 <section>
@@ -44,12 +44,12 @@ git reset "可被辨識的commit SHA1"
       <td>
         <img src="img/14_reset2.png" alt="reset2"/>
       </td>
-      <td>
+      <td class="fragment">
         <img src="img/15_reset3.png" alt="reset3"/>
       </td>
     </tr>
   </table>
-  <p style="font-size: 20px">
+  <p class="fragment" style="font-size: 20px">
     reset後並不是直接回到到第一次commit的狀態
     <br />
     所有檔案的內容還是跟reset前一樣

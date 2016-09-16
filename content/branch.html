@@ -39,27 +39,25 @@ git checkout -b "branch_name"
 <section>
   <h2>What actually is branch?</h2>
   <p style="font-size: 20px">
-    branch並不是真正的copy，比較像是一個書籤
-    <br />
-    它只是一個指到某一個commit
-    <br />
+    branch並不是真正的copy，比較像是一個書籤<br />
+    它只是一個指到某一個commit<br />
     實際上git還是以這些sha碼來辨別該到哪一個紀錄
   </p>
 
-  <img src="img/23_branch.png" alt="branch"
-  class="fragment fade-out" data-fragment-index="0"
-  style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;"/>
+  <div class="fragment fade-out absolute-pos-fragment" data-fragment-index="0">
+    <img src="img/23_branch.png" alt="branch"/>
+  </div>
 
-  <img src="img/24_branch2.png" alt="branch2" width="50%"
-  class="fragment fade-in" data-fragment-index="0"/>
+  <div class="absolute-pos-fragment">
+    <img src="img/24_branch2.png" alt="branch2" width="50%"
+    class="fragment fade-in" data-fragment-index="0"/>
 
-  <p class="fragment" style="font-size: 20px">
-    HEAD指的是目前commit所指向的位置
-    <br />
-    後面的master和my-branch就是我們的分支
-    <br />
-    而我們的這個分支目前都是指向4f03e7a...這個commit上
-  </p>
+    <small class="fragment">
+      HEAD指的是目前commit所指向的位置<br />
+      後面的master和my-branch就是我們的分支<br />
+      而我們的這個分支目前都是指向4f03e7a...這個commit上
+    </small>
+  </div>
 </section>
 
 <section>

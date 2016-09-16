@@ -12,6 +12,7 @@ echo "filename" &gt; .gitignore
         </li>
       </ul>
     </li>
+    <li>.gitignore也必須被加入git追蹤</li>
     <li style="color: red">.gitignore不用也不能加./在檔案名稱前面</li>
     <li style="color: red">這方法只適用在還沒加入追蹤的檔案</li>
   </ul>
@@ -41,14 +42,12 @@ git rm --cache "file name"
 </section>
 
 <section>
-  <h2>Ignore File</h2>
+  <h2>Ignore File Globally</h2>
   <small>
-    有一些file是每個專案都要忽略的，像是vim的暫存檔.swp等檔案
-    <br />
-    如果每一次都要重新輸入就太麻煩了
-    <br />
-    這時候就能設定一個global的.gitignore (e.g. ~/.gitignore_global)
-    <br />
+    有一些file是每個專案都要忽略的<br />
+    像是vim的暫存檔.swp等檔案<br />
+    如果每一次都要重新輸入就太麻煩了<br />
+    這時候就能設定一個global的.gitignore (e.g. ~/.gitignore_global)<br />
     然後把這個設定寫進git的config
   </small>
   <br />
