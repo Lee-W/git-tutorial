@@ -1,5 +1,5 @@
-# Git and Github Tutorial
-Tutorial for git and github
+# Git Tutorial
+Tutorial for Git 
 
 ## Clone
 ```sh
@@ -24,9 +24,6 @@ git clone --recursive https://github.com/Lee-W/git-tutorial
 - Submodule
 - Useful Plugins
 - Reference
-
-## Reference
-[reveal.js readme](https://github.com/Lee-W/git-and-github-tutorial)
 
 ## AUTHORS
 [Lee-W](https://github.com/Lee-W)
