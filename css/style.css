@@ -4,9 +4,17 @@
 }
 
 .contact-me {
-	float:center;	
+	float:center;
 }
 
 .reference li {
 	font-size: 16pt;
+}
+
+.absolute-pos-fragment {
+    position:absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
 }
