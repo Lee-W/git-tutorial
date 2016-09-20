@@ -1,13 +1,21 @@
 <section id="ignore-file">
   <h2>Ignore File</h2>
   <ul>
-    <li>有時候，有些檔案不想被加入git追蹤該怎麼辦？
+    <li>有些檔案不想被加入git追蹤該怎麼辦？
       <ul>
         <li>那就忽略它吧！</li>
         <li>
           通常會ignore有機密資料的檔案或暫存檔
           <pre><code class="sh" data-trim>
-echo "filename" &gt; .gitignore
+echo "filename" &gt;&gt; .gitignore
+          </code></pre>
+        </li>
+        <li>
+          如果想要忽略特定副檔名的檔案，可以像這樣
+          <br />
+          (e.g. .swp)
+          <pre><code class="sh" data-trim>
+echo "*.swp" &gt;&gt; .gitignore
           </code></pre>
         </li>
       </ul>
@@ -17,6 +25,7 @@ echo "filename" &gt; .gitignore
     <li style="color: red">這方法只適用在還沒加入追蹤的檔案</li>
   </ul>
 </section>
+
 
 <section>
   <h2>Ignore File</h2>
