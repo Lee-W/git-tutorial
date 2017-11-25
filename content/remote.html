@@ -10,9 +10,9 @@
   <h2>What is <a href="https://github.com" target="_blank">github</a></h2>
   <ul>
     <li>可以將原始碼開放到網路上的網站</li>
-    <li>很多很厲害的的open source project都來自這</li>
+    <li>很多厲害的的open source project都來自這</li>
     <li>私有專案是要付費的<br />
-      (需要私有專案可以試試看<a href="https://bitbucket.org" target="_blank">bitbucket</a>)</li>
+      (需要私有專案可以試試看<a href="https://bitbucket.org" target="_blank">bitbucket</a>或<a href="https://about.gitlab.com" target="_blank">gitlab</a>)</li>
   </ul>
 </section>
 
@@ -75,7 +75,7 @@ git push -u "remote name" "branch name"
   <br />
   <br />
   <small class="fragment">
-    接著用git branch --all可以看到遠端的master分支已經存在了
+    接著用<code class="sh" data-trim>git branch --all</code>可以看到遠端的master分支已經存在了
     <img src="img/35_remote4.png" alt="remote4"/>
   </small>
 </section>
@@ -91,11 +91,8 @@ git push --all
 <section>
   <h2>Credential</h2>
   <small>
-    push的時候會要求你輸入帳號密碼
-    <br />
-    但每次都要輸入實在太麻煩了
+    每次push的時候會要輸入帳號密碼實在太麻煩了
   </small>
-  <br />
   <br />
   <pre><code class="sh" data-trim>
 git config --global credential.helper cache
@@ -112,34 +109,34 @@ git config --global credential.helper cache
 </section>
 
 <section>
-  <h2>What should be in a repo</h2>
+  <h2 class="no-upper">What should be in a repo?</h2>
   <ul>
     <li>程式碼</li>
     <li>README.md
       <ul>
-        <li>說明你的專案該如何使用</li>
+        <li>說明專案該如何使用</li>
         <li>以markdown語法攥寫</li>
         <li>GitHub會自動去找readme，README等字眼，並建立出對應的說明文件</li>
-        <li>GitHub自己有一套GitHub Favored Markdown</li>
+        <li>GitHub使用的是GitHub Favored Markdown</li>
       </ul>
     </li>
+    <li><a href="https://help.github.com/articles/licensing-a-repository/" target="_blank">LICENSE.txt</a></li>
   </ul>
 </section>
 
 <section>
-  <h2>What shouldn't be in a repo?</h2>
+  <h2 class="no-upper">What shouldn't be in a repo?</h2>
   <ul>
     <li>任何機密資料(e.g. 密碼)</li>
     <li>暫存檔(e.g. .swp, __pycacehe__)</li>
     <li>Binary檔</li>
-    <li>執行檔</li>
     <li>很大的檔案（如果有必要，可以試試git-annex）</li>
   </ul>
 </section>
 
 <section>
   <h2>Clone</h2>
-  那麼上傳上去的專案，其他人又應該如何下載下來呢
+  那上傳上去的專案，其他人如何下載下來呢
 
   <pre><code class="sh" data-trim>
 git clone "repo url"
@@ -198,21 +195,6 @@ git branch -a
 git checkout "branch name"
       </code></pre>
     </li>
-
-    <li>
-      刪除遠端分支
-      <pre><code class="sh" data-trim>
-git branch -d :"branch name"
-      </code></pre>
-    </li>
-
-    <li>
-      清理過時的遠端分支
-      <pre><code class="sh" data-trim>
-git remote prune "remote name"
-      </code></pre>
-    </li>
-
     <li>
       Clone單一遠端分支
       <pre><code class="sh" data-trim>
@@ -220,6 +202,27 @@ git clone "url" --branch "branch name" --single-branch "directory"
       </code></pre>
       如果不指定directory，就會clone到當前目錄
     </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Remote branch</h2>
+  <ul>
+    <li>
+      刪除遠端分支
+      <pre><code class="sh" data-trim>
+git branch -d :"branch name"
+      </code></pre>
+    </li>
+    <li>
+      清理過時的遠端分支
+      <br />
+      (在遠端已經被移除，本地端紀錄遠端分支存在)
+      <pre><code class="sh" data-trim>
+git remote prune "remote name"
+      </code></pre>
+    </li>
+
   </ul>
 </section>
 

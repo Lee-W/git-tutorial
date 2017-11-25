@@ -1,15 +1,13 @@
 <section id="history">
   <h2>History</h2>
-  現在我們有更多的紀錄了
-  <br />
   接下來來談使用哪些工具協助我們查看以往的記錄
 </section>
 
 <section>
   <h2>log</h2>
-  現在線圖比較複雜了
+  現在的log變得更複雜了
   <br />
-  就可以加入更多的工具來協助我們看git log
+  <code class="sh" data-trim>git log</code> 有很多功能可以幫助我們容易理解log
 </section>
 
 <section>
@@ -31,9 +29,9 @@ git log --all
   <br />
   列出所有分支的log
   <br />
-  上面的是master上的
+  85f3的是master上的commit
   <br />
-  下面則是原本my-branch分支上的commit
+  88d0則是原本my-branch分支上的
 </section>
 
 <section>
@@ -83,10 +81,8 @@ git config --global alias.lg "log --grpah --decorate --all"
 
 <section>
   <h2>show</h2>
-  另外一個很實用的功用是查看某個commit中的某個file
+  另外一個很功能是是查看某個commit中的某個檔案
   <pre><code class="sh" data-trim>
   git show "commit":"file name"
   </code></pre>
 </section>
-
-

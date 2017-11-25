@@ -1,16 +1,16 @@
 <section id="branch">
   <h2>Branch</h2>
 
-  <ul>
+  <ul style="font-size: 80%">
     <li>Branch是git很重要的功能
       <ul>
         <li>想像成複製很多份同樣的code，各自做不同的修改</li>
-        <li>通常可以用在測試或攥寫新功能的時候</li>
+        <li>通常可以用在測試或攥寫新功能</li>
       </ul>
     </li>
-    <li>也可以想像是解支線任務
+    <li>可以想像是解支線任務
       <ul>
-        <li>切出不同的支線解不同的任務，每一個支線都能有自己的存檔</li>
+        <li>切出支線解不同的任務，每一個支線都能有自己的存檔</li>
         <li>最後再整併成主線的一部份(也可以不整併)</li>
       </ul>
     </li>
@@ -139,12 +139,14 @@ git branch -D "branch name"
 <section>
   <h2>Merge</h2>
   <img src="img/28_branch6.png" alt="branch6"/>
-  <br />
-  這時候merge，git就會告訴你內容有衝突
-  <br />
+  <small>
+    這時候merge，git就會告訴你內容有衝突
+  </small>
   <br />
   <p class="fragment">
-    來看一下現在status長怎樣
+    <small>
+      來看一下現在status長怎樣
+    </small>
     <br />
     <img src="img/29_branch7.png" alt="branch7" width="50%"/>
     <br />
@@ -163,7 +165,7 @@ git branch -D "branch name"
     <br />
     <img src="img/30_branch8.png" alt="branch8"/>
     <br />
-    從HEAD到===的內容就是HEAD(目前指向master)的內容
+    &lt;&lt;&lt;HEAD到===的內容就是HEAD(目前指向master)的內容
     <br />
     下面則是my-branch的內容
   </small>
