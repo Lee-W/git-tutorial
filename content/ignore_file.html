@@ -11,7 +11,7 @@ echo "filename" &gt;&gt; .gitignore
           </code></pre>
         </li>
         <li>
-          如果想要忽略特定副檔名的檔案，可以像這樣
+          如果想要忽略特定副檔名的檔案，可以用萬用字元
           <br />
           (e.g. .swp)
           <pre><code class="sh" data-trim>
@@ -33,7 +33,7 @@ echo "*.swp" &gt;&gt; .gitignore
   <p class="fragment">
     先將他從版本庫移除
   </p>
-  <pre class="fragment"><code>
+  <pre class="fragment"><code class="sh" data-trim>
 git rm --cache "file name"
   </code></pre>
   <p class="fragment">
@@ -42,25 +42,25 @@ git rm --cache "file name"
 </section>
 
 <section>
-  <h2>Ignore File</h2>
-  <a href="https://www.gitignore.io" target="_blank">gitignore.io</a>提供了不同語言.gitignore範本
-  <br />
-  透過<a href="https://github.com/tj/git-extras" target="_blank">git-extras</a>的<a href="https://github.com/tj/git-extras/blob/master/Commands.md#git-ignore-io" target="_blank">git ignore-io</a>可以直接從命令列取得範本
-  <br />
-  另外它的<a href="https://github.com/tj/git-extras/blob/master/Commands.md#git-ignore-io" target="_blank">git ignore</a>，也能讓ignore file這件事更輕鬆
-</section>
-
-<section>
   <h2>Ignore File Globally</h2>
   <small>
-    有一些file是每個專案都要忽略的<br />
-    像是vim的暫存檔.swp等檔案<br />
+    有些檔案每個專案會忽略<br />
+    (e.g., vim的暫存檔.swp)<br />
     如果每一次都要重新輸入就太麻煩了<br />
-    這時候就能設定一個global的.gitignore (e.g. ~/.gitignore_global)<br />
+    這時候可以設定一個global的.gitignore (e.g. ~/.gitignore_global)<br />
     然後把這個設定寫進git的config
   </small>
   <br />
   <pre><code class="sh" data-trim>
 git config --global core.excludesfile "path to global gitignore"
   </code></pre>
+</section>
+
+<section>
+  <h2>gitignore.io</h2>
+  <a href="https://www.gitignore.io" target="_blank">gitignore.io</a>提供了不同語言.gitignore範本
+  <br />
+  透過<a href="https://github.com/tj/git-extras" target="_blank">git-extras</a>的<a href="https://github.com/tj/git-extras/blob/master/Commands.md#git-ignore-io" target="_blank">git ignore-io</a>可以直接從命令列取得範本
+  <br />
+  另外<a href="https://github.com/tj/git-extras" target="_blank">git-extras</a>的<a href="https://github.com/tj/git-extras/blob/master/Commands.md#git-ignore-io" target="_blank">git ignore</a>，也能讓ignore file更輕鬆
 </section>

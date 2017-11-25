@@ -8,7 +8,7 @@
     <li>什麼是repo?
       <ul>
         <li>repository，git都是這麼稱呼它的版本庫</li>
-        <li>可以把它想成就是你要加入版本控制的專案</li>
+        <li>可以想成就是要加入版本控制的專案</li>
       </ul>
       <br />
     </li>
@@ -17,9 +17,10 @@
     </li>
   </ul>
     <pre><code class="sh" data-trim>
-git init "path"
+git init "some path"
     </code></pre>
-    如果不輸入path，就會初始在目前所在的資料夾
+  如果不輸入path，就會初始在目前所在的資料夾 <br/>
+  (i.e. <code class="sh" data-trime>git init .</code>)
 </section>
 
 <section>
@@ -28,7 +29,7 @@ git init "path"
   <ul style="font-size: 20px">
     <li>.git
       <ul>
-        <li>記錄git所有的操作</li>
+        <li>這個隱藏資料夾紀錄了git所有的操作</li>
         <li>裡面都是一般的file，沒有daemon或背景作業</li>
         <li>建議沒事就不要去動它了</li>
         <li style="color: red">絕對不要對他rm -rf .git，不然git的紀錄就會全部不見</li>
@@ -37,7 +38,7 @@ git init "path"
     <li>master
       <ul>
         <li>master是目前所在分支的名稱，分支的概念會在以後的章節提到</li>
-        <li>至於像這樣在terminal顯示分名稱，則是<a href="https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme" target="_blank">oh-my-zsh-powerline-theme</a>的功能</li>
+        <li>至於像這樣在terminal顯示分支名稱，則是<a href="https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme" target="_blank">oh-my-zsh-powerline-theme</a>的功能</li>
       </ul>
     </li>
   </ul>

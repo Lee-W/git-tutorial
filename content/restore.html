@@ -27,8 +27,8 @@ git reset "可被辨識的commit SHA1碼"
 
     <small>
       commit後面那串就是每個commit自己的SHA1<br />
-      一般來說只要前四碼就足夠git辨別是不同的commit<br />
-      目前聽過用到最長的是Linux Kernel，也只用到了前12碼
+      一般只要前四碼就能讓git辨別是不同的commit<br />
+      但如果是比較大型的專案，可能會需要比較多碼<br />
     </small>
     <br />
     <img src="img/13_reset.png" alt="reset" width="40%"/>
@@ -50,15 +50,15 @@ git reset "可被辨識的commit SHA1碼"
     </tr>
   </table>
   <p class="fragment" style="font-size: 20px">
-    reset後並不是直接回到到第一次commit的狀態
+    reset後<b>"不會"</b>回到到第一次commit的狀態
     <br />
     所有檔案的內容還是跟reset前一樣
     <br />
     只是commit的紀錄回到了第一個commit (只是把存檔點往前移)
     <br />
-    這時候要git checkout hi2.txt (執行回到存檔點的動作)
+    這時候要<code class="sh" data-trim>git checkout hi2.txt</code> (執行回到存檔點的動作)
     <br />
-    才會回朔到第一次commit時，hi2.txt的狀態
+    hi2.txt才會回到第一次commit時的內容
   </p>
 </section>
 
@@ -66,7 +66,7 @@ git reset "可被辨識的commit SHA1碼"
   <h2>Restore</h2>
   上一頁所提的是soft reset，只會把commit往前回朔
   <br />
-  如果要連內容一起直接回朔
+  如果要連內容一起直接回朔，就會用到hard reset
   <br />
   <pre><code class="sh" data-trim>
 git reset --HARD "可被辨識的commit SHA1"
@@ -97,7 +97,7 @@ git reflog
   <h2>Restore</h2>
   <ul>
     <li>這些長長的SHA1碼，看了就覺得煩啊
-    <li>git使用一些代號來表示前n次的commit
+    <li>git可以使用"~n"來表示前n次的commit
       <ul>
         <li>HEAD: 最近一次的commit</li>
         <li>HEAD~1: 前兩次的commit</li>
@@ -114,13 +114,20 @@ git reset HEAD~n
 <section>
   <h2>Restore</h2>
   只想讓某個檔案回到之前的狀態？
-  <pre><code>
+  <pre><code class="sh" data-trim>
 git reset HEAD~n "file name"
   </code></pre>
-  <small>只要再對這個檔案進行checkout就會回到目前commit完成的狀態</small>
+  <small>再對這個檔案進行checkout就會回到目前commit完成的狀態</small>
+</section>
 
-  <ul style="font-size: 24px">
-    <li>soft reset並不會改變你現在存在的檔案的狀態，改變的是上一次commit指向的位址</li>
+<section>
+  <h2 class="no-upper">reset vs checkout</h2>
+  <ul>
+    <li>
+      soft reset不會改變現在檔案的內容
+      <br />
+      而是改變HEAD指向的位址
+    </li>
     <li>checkout才能把現在的檔案回復到之前的狀態</li>
   </ul>
 
@@ -129,19 +136,27 @@ git reset HEAD~n "file name"
 </section>
 
 <section>
-  <h2>reset vs checkout</h2>
+  <h2 class="no-upper">reset vs checkout</h2>
   <table class="reveal">
     <tr>
       <td>
         <img src="img/18_reset4.png" alt="reset4"/>
-        <small>這是git log現在的內容</small>
+        <small>
+          這是git log現在的內容
+          <br />
+          <br />
+          待會會看第一個commit 94dc
+          <br />
+          和第三個commit 4f03
+        </small>
+
       </td>
       <td>
         <img src="img/19_reset5.png" alt="reset5"/>
         <small>
-          上面cat的結果是第三次commit後hi.txt的內容
+          上面cat的結果是commit 4f03 中 hi.txt的內容
           <br />
-          下面則是第一次commit後hi.txt的內容
+          下面則commit 94db 中 hi.txt的內容
         </small>
       </td>
     </tr>
@@ -164,7 +179,7 @@ git reset HEAD~n "file name"
           <img src="img/21_reset7.png" alt="reset7"/>
           <br />
           <small>
-            hi.txt的內容還是沒變
+            hi.txt的依然是我們剛修改的
           </small>
         </p>
       </td>
@@ -174,7 +189,7 @@ git reset HEAD~n "file name"
           <br />
           <img src="img/22_reset8.png" alt="reset8"/>
           <br />
-          <small>回復到HEAD~1的內容了</small>
+          <small>回復到HEAD~1 (4f03)的內容了</small>
         </p>
       </td>
     </tr>
