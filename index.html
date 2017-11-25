@@ -1,20 +1,19 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!DOCTYPE html>
+<html><head>
+		<meta charset="utf-8"/>
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
 
 		<title>Basic Git Tutorial</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link href="css/reveal.css" rel="stylesheet"/>
+		<link href="css/theme/black.css" rel="stylesheet"/>
 
 		<!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link href="lib/css/zenburn.css" rel="stylesheet"/>
 
     <!-- Custom Style -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -33,24 +32,144 @@
           <p><small>Author: <a href="https://github.com/Lee-W">Lee-W</a></small></p>
         </section>
 
-        <section id="about-me" data-external="about_me.html">
+        <section><section>
+<h2 class="no-upper">Lee Wei</h2>
+<table id="self-intro">
+<tr>
+<td width="30%">
+<img alt="avatars" src="http://s.gravatar.com/avatar/3e049ed33195d00a8b745b16c63dce6e?s=500" width="100%"/>
+</td>
+<td>
+<ul>
+<li>
+<i class="fa fa-lg fa-terminal" style="padding-right:1em"></i> Python Programmer
+          </li>
+<li>
+<i class="fa fa-lg fa-book" style="padding-right:1em"></i> Reader
+          </li>
+<li>
+<i class="fa fa-lg fa-camera" style="padding-right:1em"></i>Traveler
+          </li>
+<li>
+<i class="fa fa-lg fa-music" style="padding-right:1em"></i> Ukulele Player
+          </li>
+<li>
+<i class="fa fa-lg fa-lock" style="padding-right:1.4em"></i> Locker
+          </li>
+<li>
+<i class="fa fa-lg fa-rebel" style="padding-right:1em"></i> Star Wars Fan
+          </li>
+</ul>
+</td>
+</tr>
+</table>
+<hr/>
+<h4>Contact me</h4>
+<div class="contact-me">
+<a href="http://github.com/Lee-W" target="_blank" title="Github">
+<i class="fa fa-lg fa-github"></i>
+</a>
+      
+
+    <a href="http://tw.linkedin.com/in/clleew" target="_blank" title="Linkedin">
+<i class="fa fa-lg fa-linkedin-square"></i>
+</a>
+      
+
+    <a href="http://www.facebook.com/clleew" target="_blank" title="Facebook">
+<i class="fa fa-lg fa-facebook-square"></i>
+</a>
+      
+
+    <a href="http://plus.google.com/113295124327840065090" target="_blank" title="Google+">
+<i class="fa fa-lg fa-google-plus-square"></i>
+</a>
+      
+
+    <a href="https://www.gitbook.com/@lee-w" target="_blank" title="Gitbook">
+<i class="fa fa-lg fa-git-square"></i>
+</a>
+      
+
+    <a href="http://lee-w.github.io" target="_blank" title="Blog">
+<i class="fa fa-lg fa-pencil-square-o"></i>
+</a>
+</div>
+</section>
+<section>
+<table id="edu-and-experience">
+<tr>
+<th>
+        Education
+      </th>
+<th>
+        Experience
+      </th>
+</tr>
+<tr align="left">
+<td>
+<ul>
+<li>
+            [2016-2018 (Expected)]
+            <br/>
+<b>
+              Master, CSIE
+            </b>
+<br/>
+            NCKU, Tainan
+          </li>
+<li>
+            [2011-2015]
+            <br/>
+<b>
+              Bachelor, IIM
+            </b>
+<br/>
+<b>
+              Double Major: CSIE
+            </b>
+<br/>
+            NCKU, Tainan
+          </li>
+</ul>
+</td>
+<td>
+<ul>
+<li>
+            [2015-2016]
+            <br/>
+            SMS, K12 Edu Admin
+          </li>
+<li>
+            [2017-]
+            <br/>
+            Independent Contractor,
+            <br/>
+            Slice Technologies
+          </li>
+</ul>
+</td>
+</tr>
+</table>
+</section>
+
         </section>
 
         <section>
           <h2>How to use this slide</h2>
           整份slide會follow以下兩個原則
-          <br />
-          <br />
+          <br/>
+          <br/>
           <ul>
-            <li><i class="fa fa-arrow-right" aria-hidden="true">: 往右會更換不同的主題</i></li>
-            <li><i class="fa fa-arrow-down" aria-hidden="true">: 往下則是同一主題更詳細的介紹</i></li>
+            <li><i aria-hidden="true" class="fa fa-arrow-right">: 往右會更換不同的主題</i></li>
+            <li><i aria-hidden="true" class="fa fa-arrow-down">: 往下則是同一主題更詳細的介紹</i></li>
           </ul>
         </section>
 
 				<section>
           <h2>Table of content</h2>
           <table class="reavel">
-            <tr>
+            <tbody><tr>
               <td>
                 <ul>
                   <li><a href="#/intro">Intro</a></li>
@@ -76,44 +195,398 @@
                 </ul>
               </td>
             </tr>
-          </table>
+          </tbody></table>
           <a href="#/reference">Reference</a>
 				</section>
 
-        <section data-external="content/intro.html">
+        <section><section id="intro">
+<h1>What is Git?</h1>
+</section>
+<section>
+<h2>
+    版本控制系統
+    <br/>
+    (Version Control System)
+  </h2>
+<p class="fragment">那版本控制又是什麼...</p>
+</section>
+<section>
+<ul>
+<li>有沒有Code改著改著就回不去的經驗?</li>
+<li class="fragment">還是複製了太多備份不知道哪份才是要用的?</li>
+</ul>
+</section>
+<section>
+<div style="position:relative">
+<h2 class="fragment fade-in absolute-pos-fragment" data-fragment-index="0">
+      打Game要存檔<br/>
+      打Code當然也要存檔
+    </h2>
+<h2 class="fragment fade-out absolute-pos-fragment" data-fragment-index="0">
+      你需要的就是版本控制
+    </h2>
+</div>
+</section>
+<section>
+  存檔? 多複製幾份不就好了?
+  <img alt="copy" src="img/1_copy.png"/>
+<p class="fragment" style="color: red;">占空間，難維護</p>
+<p class="fragment" style="color: LawnGreen;">Git只會記錄每一次有差異的部份</p>
+</section>
+<section>
+<h3>What can version control do for us?</h3>
+<ol>
+<li>Historial propose
+      <ul>
+<li>也就是存檔，讓之後Code寫錯了可以回朔</li>
+</ul>
+</li>
+<li>Collaboration
+      <ul>
+<li>自動整合不同人寫的Code<br/>(如果沒有同一段Code被不同人修改)</li>
+</ul>
+</li>
+</ol>
+</section>
+
         </section>
 
-        <section data-external="content/install.html">
+        <section><section id="install">
+<h1>
+    Install Git
+  </h1>
+<ul>
+<li><a href="#/linux-install">Linux</a></li>
+<li><a href="#/mac-install">Mac</a></li>
+<li><a href="#/windows-install">Windows</a></li>
+</ul>
+</section>
+<section id="linux-install">
+<h2>Install on Linux</h2>
+  Fedora
+  <pre>
+    <code class="sh" data-trim="">
+yum install git-core
+    </code>
+  </pre>
+  Debian, Ubuntu
+  <pre>
+    <code class="sh" data-trim="">
+sudo apt-get install git
+    </code>
+  </pre>
+</section>
+<section id="mac-install">
+<h2>Install for Mac</h2>
+  先裝<a href="http://brew.sh" target="_blank">HomeBrew</a>吧
+
+  <pre>
+    <code class="sh" data-trim="">
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    </code>
+  </pre>
+
+  安裝git
+  <pre>
+    <code class="sh" data-trim="">
+brew install git
+    </code>
+ </pre>
+</section>
+<section id="windows-install">
+<h2>Install for Windows</h2>
+<a href="https://git-for-windows.github.io" target="_blank">Git for Windows</a>
+</section>
+
         </section>
 
-        <section data-external="content/setup.html">
+        <section><section id="setup">
+<h2>Setup</h2>
+</section>
+<section>
+<h2>Set E-mail and Name</h2>
+<small>
+    一開始git會要求要先設定e-mail跟名稱
+    <br/>
+    一般來說可以設定成GitHub或bitbucket的帳號
+    <br/>
+    不過也可以設定無效的使用者名稱
+  </small>
+<pre><code class="sh" data-trim="">
+git config --global user.name "Your Name"
+git config --global user.email "Your Email"
+  </code></pre>
+</section>
+<section>
+<h2>Set Alias</h2>
+  以剪短的指令取代長長的指令
+  <p style="color:Red">懶人必備</p>
+<pre><code class="sh" data-trim="">
+git config --global alias."command alias" "original command"
+  </code></pre>
+
+  下面是一些我常用的alias
+  <pre><code class="sh" data-trim="">
+git config --global alias.st status
+git config --global alias.cmt commit
+git config -–global alias.br branch
+git config --global alias.ch checkout
+  </code></pre>
+</section>
+<section>
+<h2>List Settings</h2>
+  透過這個指令就能看到我們對git做了哪些設定
+  <br/>
+<br/>
+  Global Setting
+  <pre><code class="sh" data-trim="">
+git config --global -l
+  </code></pre>
+
+  Repo Setting (當下專案的設定)
+  <pre><code class="sh" data-trim="">
+git config -l
+  </code></pre>
+</section>
+<section>
+<h2>Edit Settings</h2>
+  更改global的git設定
+  <pre><code class="sh" data-trim="">
+git config --global -e
+  </code></pre>
+</section>
+
         </section>
 
-        <section data-external="content/quickstart.html">
+        <section><section id="quickstart">
+<h2>Quick Start</h2>
+</section>
+<section>
+<h2>Create a local repo</h2>
+<ul>
+<li>什麼是repo?
+      <ul>
+<li>repository，git都是這麼稱呼它的版本庫</li>
+<li>可以想成就是要加入版本控制的專案</li>
+</ul>
+<br/>
+</li>
+<li>
+      初始一個git專案(讓這個資料夾被git記錄)
+    </li>
+</ul>
+<pre><code class="sh" data-trim="">
+git init "some path"
+    </code></pre>
+  如果不輸入path，就會初始在目前所在的資料夾 <br/>
+  (i.e. <code class="sh" data-trime="">git init .</code>)
+</section>
+<section>
+<h2>Create a local repo</h2>
+<img alt="init" src="img/2_init.png"/>
+<ul style="font-size: 20px">
+<li>.git
+      <ul>
+<li>這個隱藏資料夾紀錄了git所有的操作</li>
+<li>裡面都是一般的file，沒有daemon或背景作業</li>
+<li>建議沒事就不要去動它了</li>
+<li style="color: red">絕對不要對他rm -rf .git，不然git的紀錄就會全部不見</li>
+</ul>
+</li>
+<li>master
+      <ul>
+<li>master是目前所在分支的名稱，分支的概念會在以後的章節提到</li>
+<li>至於像這樣在terminal顯示分支名稱，則是<a href="https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme" target="_blank">oh-my-zsh-powerline-theme</a>的功能</li>
+</ul>
+</li>
+</ul>
+</section>
+<section>
+<h2>Stage</h2>
+  看到現在專案中各個檔案的狀態
+  <pre><code class="sh" data-trim="">
+git status
+  </code></pre>
+
+  不過我們已經透過alias把status設為st了
+  <pre><code class="sh" data-trim="">
+git st
+  </code></pre>
+<p class="fragment">
+    接下來會說明各個stage代表的意義
+  </p>
+</section>
+<section>
+<h2>Stage</h2>
+
+  總共分成4個stage
+  <br/>
+<br/>
+<ol start="0">
+<li><p style="display: inline; color: red">untracked</p> (新的檔案，還沒加入git中)</li>
+<li><p style="display: inline; color: green">unmodified</p> (完成add，但還沒commit)</li>
+<li><p style="display: inline; color: red">modified</p> (add完後又做了修改)</li>
+<li><p style="display: inline; color: green">staged</p> (commit完成，到這個階段就已經完成紀錄)</li>
+</ol>
+<br/>
+<br/>
+  接下來會介紹什麼是add和commit
+</section>
+<section>
+<h2>Stage 3 - staged</h2>
+
+  所有的東西目前都已經加入git (因為還沒有東西)
+  <img alt="st" src="img/3_st.png"/>
+</section>
+<section>
+<h2>Stage 0 - untracked</h2>
+<ul>
+<li>建立一個檔案叫hi.txt</li>
+<li>現在有一個檔案進入untracked</li>
+</ul>
+<img alt="st2" src="img/4_st2.png"/>
+</section>
+<section>
+<h2>Stage 1 - unmodified</h2>
+  將新的檔案加入git
+
+  <pre><code class="sh" data-trim="">
+git add "file name"
+  </code></pre>
+<img alt="st3" src="img/5_st3.png"/>
+</section>
+<section>
+<h2>Stage 1 - untracked</h2>
+
+  如果一次要加入很多檔案怎麼辦？
+  <img alt="st4" src="img/6_st4.png"/>
+</section>
+<section>
+<h2>Stage 1 - unmodified</h2>
+<pre><code class="sh" data-trim="">
+git add .
+  </code></pre>
+<img alt="st5" src="img/7_st5.png" width="80%"/>
+<small>
+    不過一般建議還是一個一個檔案add比較好
+    <br/>
+    避免add到錯誤的檔案
+  </small>
+</section>
+<section>
+<h2>Stage 3 - staged</h2>
+<small>讓剛剛的檔案進入staged階段吧，之後這個檔案就會一直被記錄在git</small>
+<pre><code class="sh" data-trim="">
+git commit
+  </code></pre>
+<small>接著會進入編輯器，讓你輸入commit</small>
+<img alt="commit" src="img/8_commit.png" width="80%"/>
+<small>預設的編輯器通常不是vi，可以透過這個指令設定</small>
+<pre><code class="sh" data-trim="">
+git config --global core.editor "vim"
+  </code></pre>
+</section>
+<section>
+<h2>Log</h2>
+  既然檔案已經進入紀錄
+  <br/>
+  讓我們來查看之前的紀錄
+  <pre><code class="sh" data-trim="">
+git log
+  </code></pre>
+<img alt="log" src="img/11_log.png"/>
+<small>commit後面的文字是SHA1碼，是每一個commit獨有的一組編號</small>
+</section>
+<section>
+<h2>Stage 2 - modified</h2>
+  如果修改了add或commit的檔案，就會變成這樣
+  <img alt="st6" src="img/12_st6.png"/>
+<br/>
+  這時候只要再用git add，加入紀錄就好了
+</section>
+<section>
+<h2>Stage</h2>
+<ul>
+<li>新增檔案 → 加入track (git add) → 提交(git commit) → 繼續加入其他檔案</li>
+<li>修改檔案 → 加入stage (git add) → 提交(git commit) → 繼續修改其他檔案</li>
+</ul>
+</section>
+
         </section>
 
-        <section data-external="content/commit.html">
+        <section><section id="commit">
+<h2>Commit</h2>
+  上一個章節提到寫commit
+  <br/>
+  那麼commit到底要寫些什麼呢？
+  <br/>
+<p class="fragment" style="color: LawnGreen">敘述這次做的修改</p>
+</section>
+<section>
+<h2 class="no-upper">How to write a good git commit</h2>
+<ul style="font-size: 80%">
+<li>Priciple
+      <ul>
+<li>為每個不同的修改做一次commit</li>
+<li>不要一個commit中記錄太多的修改</li>
+<li>讓你的commit說一個故事</li>
+</ul>
+</li>
+<li>More Specific
+      <ul>
+<li>第一行應該在80字以下</li>
+<li>使用現在式</li>
+<li>不要去重複任何可以在git diff中被找到的東西</li>
+<li>更多的細節，應該空下第二行，從第三行開始寫</li>
+<li>在第三行以後，提到為什麼做了這次的修改</li>
+</ul>
+</li>
+</ul>
+</section>
+<section>
+<h2 class="no-upper">How to write a good git commit</h2>
+
+  前面的建議是github的staff來成大分享的時候給的
+  <br/>
+  下面這幾篇文章也相當值得參考
+  <br/>
+<ul>
+<li><a href="https://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message" target="_blank">5 Useful Tips For A Better Commit Message</a></li>
+<li><a href="https://blog.wu-boy.com/2015/09/how-to-write-git-commit-message/" target="_blank">該如何寫好 git commit message</a></li>
+<li><a href="https://blog.wu-boy.com/2015/11/git-tips-don-t-commit-commented-out-code/" target="_blank">請不要 commit 已經註解的程式碼</a></li>
+</ul>
+</section>
+<section>
+<h2>Commit</h2>
+  如果上一次commit寫錯了，怎麼辦?
+  <pre><code class="sh" data-trim="">
+git commit --amend
+  </code></pre>
+<img alt="commit_amend" src="img/10_commit_amend.png"/>
+<small>將剛剛的commit修改成，更具有意義的內容</small>
+</section>
+
         </section>
 
         <section id="diff">
           <section>
             <h2>diff</h2>
             在進入回朔之前
-            <br />
+            <br/>
             我們必須要知道如何在不同的紀錄間做比較
           </section>
 
           <section>
             <h2>diff</h2>
             看"target"和上一次commit的不同
-            <pre><code class="sh" data-trim>
+            <pre><code class="sh" data-trim="">
           git diff "target"
             </code></pre>
 
             <b>常見的target</b>
-            <br />
+            <br/>
             <table class="reveal">
-              <tr>
+              <tbody><tr>
                 <td>"SHA1"</td>
                 <td>與SHA1碼對應的commit</td>
               </tr>
@@ -129,32 +602,277 @@
                 <td>master^^</td>
                 <td>等效master~2</td>
               </tr>
-            </table>
+            </tbody></table>
           </section>
 
           <section>
             <h2>diff</h2>
             看從a到b的改變
-            <pre><code class="sh" data-trim>
+            <pre><code class="sh" data-trim="">
           git diff a b
             </code></pre>
 
             看modified的檔案和上一次commit的不同
-            <pre><code class="sh" data-trim>
+            <pre><code class="sh" data-trim="">
           git diff
             </code></pre>
 
             看unmodified的檔案和上一次commit的不同
-            <pre><code class="sh" data-trim>
+            <pre><code class="sh" data-trim="">
           git diff --staged
             </code></pre>
           </section>
         </section>
 
-        <section data-external="content/restore.html">
+        <section><section id="restore">
+<h2>Restore</h2>
+
+  讓檔案回到最後commit的狀態
+  <pre><code class="sh" data-trim="">
+git checkout "file name"
+  </code></pre>
+<br/>
+  讓檔案回到modified (也就是取消add)
+  <pre><code class="sh" data-trim="">
+git reset "file name"
+  </code></pre>
+</section>
+<section>
+<h2>Restore</h2>
+<small>經過了多次commit，如果想回到很久以前的版本該怎麼辦？</small>
+<br/>
+<div class="fragment fade-out absolute-pos-fragment" data-fragment-index="0">
+<img alt="reset" src="img/13_reset.png"/>
+</div>
+<div class="fragment fade-in absolute-pos-fragment" data-fragment-index="0">
+<pre><code class="sh" data-trim="">
+git reset "可被辨識的commit SHA1碼"
+    </code></pre>
+<small>
+      commit後面那串就是每個commit自己的SHA1<br/>
+      一般只要前四碼就能讓git辨別是不同的commit<br/>
+      但如果是比較大型的專案，可能會需要比較多碼<br/>
+</small>
+<br/>
+<img alt="reset" src="img/13_reset.png" width="40%"/>
+</div>
+</section>
+<section>
+<h2>Restore</h2>
+<small>回到第一個commit吧</small>
+<br/>
+<table class="reveal">
+<tr>
+<td>
+<img alt="reset2" src="img/14_reset2.png"/>
+</td>
+<td class="fragment">
+<img alt="reset3" src="img/15_reset3.png"/>
+</td>
+</tr>
+</table>
+<p class="fragment" style="font-size: 20px">
+    reset後<b>"不會"</b>回到到第一次commit的狀態
+    <br/>
+    所有檔案的內容還是跟reset前一樣
+    <br/>
+    只是commit的紀錄回到了第一個commit (只是把存檔點往前移)
+    <br/>
+    這時候要<code class="sh" data-trim="">git checkout hi2.txt</code> (執行回到存檔點的動作)
+    <br/>
+    hi2.txt才會回到第一次commit時的內容
+  </p>
+</section>
+<section>
+<h2>Restore</h2>
+  上一頁所提的是soft reset，只會把commit往前回朔
+  <br/>
+  如果要連內容一起直接回朔，就會用到hard reset
+  <br/>
+<pre><code class="sh" data-trim="">
+git reset --HARD "可被辨識的commit SHA1"
+  </code></pre>
+</section>
+<section>
+<h2>Restore</h2>
+<ul>
+<li>如果後悔reset怎麼辦？
+      <ul>
+<li>沒關係，東西其實都還在，再reset回去就好了</li>
+</ul>
+</li>
+<li>查看所有的參照日誌</li>
+</ul>
+<pre><code class="sh" data-trim="">
+git reflog
+  </code></pre>
+<img alt="reflog" src="img/16_reflog.png"/>
+<br/>
+  同樣git reset加上reflog前面的SHA碼即可
+  <img alt="reflog2" src="img/17_reflog2.png"/>
+</section>
+<section>
+<h2>Restore</h2>
+<ul>
+<li>這些長長的SHA1碼，看了就覺得煩啊
+    <li>git可以使用"~n"來表示前n次的commit
+      <ul>
+<li>HEAD: 最近一次的commit</li>
+<li>HEAD~1: 前兩次的commit</li>
+<li>HEAD~n: 前n+1次的commit</li>
+</ul>
+</li>
+</li></ul>
+<pre><code class="sh" data-trim="">
+git reset HEAD~n
+  </code></pre>
+</section>
+<section>
+<h2>Restore</h2>
+  只想讓某個檔案回到之前的狀態？
+  <pre><code class="sh" data-trim="">
+git reset HEAD~n "file name"
+  </code></pre>
+<small>再對這個檔案進行checkout就會回到目前commit完成的狀態</small>
+</section>
+<section>
+<h2 class="no-upper">reset vs checkout</h2>
+<ul>
+<li>
+      soft reset不會改變現在檔案的內容
+      <br/>
+      而是改變HEAD指向的位址
+    </li>
+<li>checkout才能把現在的檔案回復到之前的狀態</li>
+</ul>
+<p class="fragment">???...</p>
+<p class="fragment">沒關係，看看下一頁的例子吧</p>
+</section>
+<section>
+<h2 class="no-upper">reset vs checkout</h2>
+<table class="reveal">
+<tr>
+<td>
+<img alt="reset4" src="img/18_reset4.png"/>
+<small>
+          這是git log現在的內容
+          <br/>
+<br/>
+          待會會看第一個commit 94dc
+          <br/>
+          和第三個commit 4f03
+        </small>
+</td>
+<td>
+<img alt="reset5" src="img/19_reset5.png"/>
+<small>
+          上面cat的結果是commit 4f03 中 hi.txt的內容
+          <br/>
+          下面則commit 94db 中 hi.txt的內容
+        </small>
+</td>
+</tr>
+</table>
+</section>
+<section>
+<h2>reset vs checkout</h2>
+<small>先在hi.txt做一些修改</small>
+<br/>
+<img alt="reset6" src="img/20_reset6.png"/>
+<table>
+<tr>
+<td>
+<p class="fragment">
+<small>
+            reset 到兩次以前的commit
+          </small>
+<br/>
+<img alt="reset7" src="img/21_reset7.png"/>
+<br/>
+<small>
+            hi.txt的依然是我們剛修改的
+          </small>
+</p>
+</td>
+<td>
+<p class="fragment">
+<small>checkout</small>
+<br/>
+<img alt="reset8" src="img/22_reset8.png"/>
+<br/>
+<small>回復到HEAD~1 (4f03)的內容了</small>
+</p>
+</td>
+</tr>
+</table>
+</section>
+
         </section>
 
-        <section data-external="content/ignore_file.html">
+        <section><section id="ignore-file">
+<h2>Ignore File</h2>
+<ul>
+<li>有些檔案不想被加入git追蹤該怎麼辦？
+      <ul>
+<li>那就忽略它吧！</li>
+<li>
+          通常會ignore有機密資料的檔案或暫存檔
+          <pre><code class="sh" data-trim="">
+echo "filename" &gt;&gt; .gitignore
+          </code></pre>
+</li>
+<li>
+          要忽略特定副檔名的檔案，可以用萬用字元
+          <br/>
+<pre><code class="sh" data-trim="">
+echo "*.swp" &gt;&gt; .gitignore
+          </code></pre>
+</li>
+</ul>
+</li>
+<li>.gitignore也必須被加入git追蹤</li>
+<li style="color: red">.gitignore不用也不能加./在檔案名稱前面</li>
+<li style="color: red">這方法只適用在還沒加入追蹤的檔案</li>
+</ul>
+</section>
+<section>
+<h2>Ignore File</h2>
+  那如果想忽略的檔案已經被加入git追蹤怎麼辦？
+  <p class="fragment">
+    先將他從版本庫移除
+  </p>
+<pre class="fragment"><code class="sh" data-trim="">
+git rm --cache "file name"
+  </code></pre>
+<p class="fragment">
+    接著再做一次上一頁的步驟，就可以ignore了
+  </p>
+</section>
+<section>
+<h2>Ignore File Globally</h2>
+<small>
+    有些檔案每個專案會忽略<br/>
+    (e.g., vim的暫存檔.swp)<br/>
+    如果每一次都要重新輸入就太麻煩了<br/>
+    這時候可以設定一個global的.gitignore (e.g. ~/.gitignore_global)<br/>
+    然後把這個設定寫進git的config
+  </small>
+<br/>
+<pre><code class="sh" data-trim="">
+git config --global core.excludesfile "path to global gitignore"
+  </code></pre>
+</section>
+<section>
+<h2>gitignore.io</h2>
+<p style="font-size: 80%">
+<a href="https://www.gitignore.io" target="_blank">gitignore.io</a>提供了不同語言.gitignore範本
+    <br/>
+    透過<a href="https://github.com/tj/git-extras" target="_blank">git-extras</a>的<a href="https://github.com/tj/git-extras/blob/master/Commands.md#git-ignore-io" target="_blank">git ignore-io</a>可以直接從command line取得範本
+    <br/>
+    另外<a href="https://github.com/tj/git-extras" target="_blank">git-extras</a>的<a href="https://github.com/tj/git-extras/blob/master/Commands.md#git-ignore-io" target="_blank">git ignore</a>，也能讓ignore file更輕鬆
+  </p>
+</section>
+
         </section>
 
         <section>
@@ -162,33 +880,209 @@
           <ul>
             <li>
               刪除已經被加入git追蹤的檔案
-              <pre><code class="sh" data-trim>
+              <pre><code class="sh" data-trim="">
 git rm "file name"
               </code></pre>
             </li>
             <li>
               刪除檔案在git中的追蹤，但不刪除檔案本身
-              <pre><code class="sh" data-trim>
+              <pre><code class="sh" data-trim="">
 git rm --cache "file name"
               </code></pre>
             </li>
             <li>
               重新命名或移動位置
-              <pre><code class="sh" data-trim>
+              <pre><code class="sh" data-trim="">
 git mv "old name" "new name"
               </code></pre>
             </li>
           </ul>
         </section>
 
-        <section data-external="content/branch.html">
+        <section><section id="branch">
+<h2>Branch</h2>
+<ul>
+<li>Branch是git很重要的功能
+      <ul>
+<li>想像成複製很多份同樣的code，各自做不同的修改</li>
+<li>通常可以用在測試或攥寫新功能的時候</li>
+</ul>
+</li>
+<li>也可以想像是解支線任務
+      <ul>
+<li>切出不同的支線解不同的任務，每一個支線都能有自己的存檔</li>
+<li>最後再整併成主線的一部份(也可以不整併)</li>
+</ul>
+</li>
+</ul>
+</section>
+<section>
+<h2>Branch</h2>
+  創造一個新的分支 (名稱自訂)
+  <pre><code class="sh" data-trim="">
+git branch "branch name"
+  </code></pre>
+<small>創造分支後，我們依然會留在原本的分支上，必須用下面的方法切換到新的分支上</small>
+<br/>
+  切換到另一個分支
+  <pre><code class="sh" data-trim="">
+git checkout "branch name"
+  </code></pre>
+<br/>
+  一個指令做到上面兩個步驟
+  <pre><code class="sh" data-trim="">
+git checkout -b "branch_name"
+  </code></pre>
+</section>
+<section>
+<h2>What actually is branch?</h2>
+<p style="font-size: 20px">
+    branch並不是真正的copy，比較像是一個書籤<br/>
+    它只是一個指到某一個commit<br/>
+    實際上git還是以這些sha碼來辨別該到哪一個紀錄
+  </p>
+<div class="fragment fade-out absolute-pos-fragment" data-fragment-index="0">
+<img alt="branch" src="img/23_branch.png"/>
+</div>
+<div class="absolute-pos-fragment">
+<img alt="branch2" class="fragment fade-in" data-fragment-index="0" src="img/24_branch2.png" width="50%"/>
+<small class="fragment">
+      HEAD指的是目前commit所指向的位置<br/>
+      後面的master和my-branch就是我們的分支<br/>
+      而我們的這個分支目前都是指向4f03e7a...這個commit上
+    </small>
+</div>
+</section>
+<section>
+<h2>Branch</h2>
+<p style="font-size: 20px">
+    我們在my-branch跟master上都做了修改，並分別commit後
+    <br/>
+    就能比較明確看出分支的效果
+  </p>
+<img alt="branch3" class="fragment" src="img/25_branch3.png"/>
+<p class="fragment" style="font-size: 20px">
+    這時候就可以看到master跟branch指向不同的commit
+    <br/>
+    也不再是同一條線上
+  </p>
+</section>
+<section>
+<h2>Branch</h2>
+  實際上在git中，並沒有所謂的主線
+  <br/>
+  master只是預設的branch名稱
+  <br/>
+  一個專案即使沒有master也是沒問題的
+  <br/>
+  定義一條branch為主線只是為了方便開發
+</section>
+<section>
+<h2>Merge</h2>
+    既然在不同的branch上有了不同的修改
+    <br/>
+    我們就可以來談，該怎麼整併在一起
+</section>
+<section>
+<h2>Merge</h2>
+<ul>
+<li>
+      將另一個branch合併到現在的branch
+      <pre><code class="sh" data-trim="">
+git merge "branch name"
+      </code></pre>
+<small>通常會在branch修改完並commit後，切換到master才merge</small>
+</li>
+<li>
+      之後就能把合併完的branch刪掉
+      <pre><code class="sh" data-trim="">
+git branch -d "branch name"
+      </code></pre>
+</li>
+<li>
+      如果想強制刪掉還沒merge的branch
+      <pre><code class="sh" data-trim="">
+git branch -D "branch name"
+      </code></pre>
+</li>
+</ul>
+</section>
+<section>
+<h2>Merge</h2>
+  我們來看一下master跟my-branch的內容分別是什麼
+  <table class="reveal">
+<tr>
+<td>
+<img alt="branch4" src="img/26_branch4.png"/>
+</td>
+<td>
+<img alt="branch5" src="img/27_branch5.png"/>
+</td>
+</tr>
+</table>
+<p class="fragment">
+    完全不同的內容，git會怎麼處理呢？
+  </p>
+</section>
+<section>
+<h2>Merge</h2>
+<img alt="branch6" src="img/28_branch6.png"/>
+<br/>
+  這時候merge，git就會告訴你內容有衝突
+  <br/>
+<br/>
+<p class="fragment">
+    來看一下現在status長怎樣
+    <br/>
+<img alt="branch7" src="img/29_branch7.png" width="50%"/>
+<br/>
+<small>
+      git 已經幫我們判斷其他檔案並沒有衝突
+      <br/>
+      只剩下hi.txt有無法被演算法整併的內容
+    </small>
+</p>
+</section>
+<section>
+<h2>Merge</h2>
+<small>
+    這時候打開hi.txt，git會標示哪裡是哪個branch的內容
+    <br/>
+<img alt="branch8" src="img/30_branch8.png"/>
+<br/>
+    從HEAD到===的內容就是HEAD(目前指向master)的內容
+    <br/>
+    下面則是my-branch的內容
+  </small>
+</section>
+<section>
+<h2>Merge</h2>
+  留下想要的內容，add並commit後
+  <br/>
+  就可以看到兩條分支已經整併在一起
+  <br/>
+<img alt="branch9" src="img/31_branch9.png" width="60%"/>
+</section>
+<section>
+<h3>Rename branch</h3>
+<small>重新命名分支</small>
+<pre><code class="sh" data-trim="">
+git branch -m "oldname" "newname"
+  </code></pre>
+<br/>
+<small>如果是要重新命名現在所在的分支，則可以省略原本的名稱</small>
+<pre><code class="sh" data-trim="">
+git branch -m "newname"
+  </code></pre>
+</section>
+
         </section>
 
         <section>
           <section id="tag">
             <h2>tag</h2>
             一般而言，可以拿來做標記發行的版本
-            <br />
+            <br/>
             或者也可以想成是標記特別重要的commit
           </section>
           <section>
@@ -196,20 +1090,20 @@ git mv "old name" "new name"
             <ul>
               <li>
                 在現在的commit上，建立一個tag
-                <pre><code class="sh" data-trim>
+                <pre><code class="sh" data-trim="">
 git tag -a "tag name"
                 </code></pre>
               </li>
 
               <li>
                 列出所有的tag
-                <pre><code class="sh" data-trim>
+                <pre><code class="sh" data-trim="">
 git tag
                 </code></pre>
               </li>
 
               <li>觀看某一個tag的詳細資訊
-                <pre><code class="sh" data-trim>
+                <pre><code class="sh" data-trim="">
 git show "tag name"
               </code></pre>
               </li>
@@ -217,23 +1111,564 @@ git show "tag name"
           </section>
           <section>
             <h2>tag</h2>
-            <img src="img/40_tag.png" alt="tag"/>
+            <img alt="tag" src="img/40_tag.png"/>
           </section>
         </section>
 
-        <section data-external="content/remote.html">
+        <section><section id="remote">
+<h2>Remote</h2>
+  既然要能跟別人協作<br/>
+  當然要能把repo丟上遠端<br/>
+<br/>
+  接下來會以GitHub作為例子
+</section>
+<section>
+<h2>What is <a href="https://github.com" target="_blank">github</a></h2>
+<ul>
+<li>可以將原始碼開放到網路上的網站</li>
+<li>很多很厲害的的open source project都來自這</li>
+<li>私有專案是要付費的<br/>
+      (需要私有專案可以試試看<a href="https://bitbucket.org" target="_blank">bitbucket</a>)</li>
+</ul>
+</section>
+<section>
+<h2>Remote</h2>
+  要上傳前，當然要有個空間可以上傳<br/>
+  先在GitHub建立一個repository
+  <img alt="remote" src="img/32_remote.png" width="70%"/>
+</section>
+<section>
+<h2>Remote</h2>
+<small>
+    接著就會看到這個頁面<br/>
+<img alt="remote2" src="img/33_remote2.png" width="50%"/><br/>
+    因為我們已經有本地的git專案了，我們只要看
+  </small>
+<pre><code class="sh" data-trim="">
+git remote add origin https://github.com/Lee-W/Git-Tutorial-Sample.git
+git push -u origin master
+  </code></pre>
+</section>
+<section>
+<h2>Remote</h2>
+  增加remote(遠端的存放點)
+  <pre><code class="sh" data-trim="">
+git remote add "remote-name" "remote url"
+  </code></pre>
+<ul style="font-size: 24px">
+<li>上一頁的origin就是remote name</li>
+<li>remote url則是https://github.com/Lee-W/Git-Tutorial-Sample.git</li>
+<li>origin只是預設的remote name，並沒有強制一定要存在</li>
+<li>一個專案也有可能有超過一個remote</li>
+</ul>
+</section>
+<section>
+<h2>Remote</h2>
+  檢視現在有哪些remote
+  <pre><code class="sh" data-trim="">
+git remote -v
+  </code></pre>
+<img alt="remote3" src="img/34_remote3.png" width="70%"/>
+</section>
+<section>
+<h2>Push your repo</h2>
+  所謂push就是上傳你的專案
+  <pre><code class="sh" data-trim="">
+git push -u "remote name" "branch name"
+  </code></pre>
+<small>
+    -u 可以讓git記住下一次如果只下git push的command
+    <br/>
+    要push到這次push的remote和branch
+    <br/>
+</small>
+<br/>
+<br/>
+<small class="fragment">
+    接著用git branch --all可以看到遠端的master分支已經存在了
+    <img alt="remote4" src="img/35_remote4.png"/>
+</small>
+</section>
+<section>
+<h2>Push your repo</h2>
+  將所有的branch push上去
+  <pre><code class="sh" data-trim="">
+git push --all
+  </code></pre>
+</section>
+<section>
+<h2>Credential</h2>
+<small>
+    push的時候會要求你輸入帳號密碼
+    <br/>
+    但每次都要輸入實在太麻煩了
+  </small>
+<br/>
+<br/>
+<pre><code class="sh" data-trim="">
+git config --global credential.helper cache
+  </code></pre>
+<small>
+    這個指令可以幫我們記住帳號密碼15分鐘
+    <br/>
+    如果cache改成store就可以永遠記住
+    <br/>
+    不過需要注意的是，store會將帳號密碼以明碼記錄在~/.git-credentials
+    <br/>
+    因此不建議使用store
+  </small>
+</section>
+<section>
+<h2>What should be in a repo</h2>
+<ul>
+<li>程式碼</li>
+<li>README.md
+      <ul>
+<li>說明你的專案該如何使用</li>
+<li>以markdown語法攥寫</li>
+<li>GitHub會自動去找readme，README等字眼，並建立出對應的說明文件</li>
+<li>GitHub自己有一套GitHub Favored Markdown</li>
+</ul>
+</li>
+</ul>
+</section>
+<section>
+<h2>What shouldn't be in a repo?</h2>
+<ul>
+<li>任何機密資料(e.g. 密碼)</li>
+<li>暫存檔(e.g. .swp, __pycacehe__)</li>
+<li>Binary檔</li>
+<li>執行檔</li>
+<li>很大的檔案（如果有必要，可以試試git-annex）</li>
+</ul>
+</section>
+<section>
+<h2>Clone</h2>
+  那麼上傳上去的專案，其他人又應該如何下載下來呢
+
+  <pre><code class="sh" data-trim="">
+git clone "repo url"
+  </code></pre>
+</section>
+<section>
+<h2>Pull</h2>
+  如果已經有這個專案，要怎麼更新呢？
+  <pre><code class="sh" data-trim="">
+git pull "remote name" "branch name"
+  </code></pre>
+</section>
+<section>
+<h2>What did pull do?</h2>
+<small>
+    Pull實際上做了fetch和merge命令的動作
+    <br/>
+<br/>
+    git fetch做的只是從遠端抓下來
+    <br/>
+    讓我們可以checkout到 "remote name"/"branch name"這個分支
+    <br/>
+    並不會像pull一樣處理merge的動作
+    <br/>
+<img alt="remote5" src="img/36_remote5.png" width="70%"/>
+</small>
+<small class="fragment">
+<img alt="remote6" src="img/37_remote6.png" width="70%"/>
+<br/>
+    因為我們並沒有做修改，master跟origin/master都是指像同樣的地方
+  </small>
+</section>
+<section>
+<h2>Other Remote Operation</h2>
+  重新命名Remote
+  <pre><code class="sh" data-trim="">
+git remote rename "old name" "new name"
+  </code></pre>
+
+  刪除Remote
+  <pre><code class="sh" data-trim="">
+git remote rm "remote name"
+  </code></pre>
+</section>
+<section>
+<h2>Remote branch</h2>
+<ul>
+<li>Check遠端分支
+      <pre><code class="sh" data-trim="">
+git fetch
+git branch -a
+git checkout "branch name"
+      </code></pre>
+</li>
+<li>
+      刪除遠端分支
+      <pre><code class="sh" data-trim="">
+git branch -d :"branch name"
+      </code></pre>
+</li>
+<li>
+      清理過時的遠端分支
+      <pre><code class="sh" data-trim="">
+git remote prune "remote name"
+      </code></pre>
+</li>
+<li>
+      Clone單一遠端分支
+      <pre><code class="sh" data-trim="">
+git clone "url" --branch "branch name" --single-branch "directory"
+      </code></pre>
+      如果不指定directory，就會clone到當前目錄
+    </li>
+</ul>
+</section>
+<section>
+<h2>Remote Tags</h2>
+<ul>
+<li>Push單一Tag
+      <pre><code class="sh" data-trim="">
+git push "remote name" "tag name"
+      </code></pre>
+</li>
+<li>Push所有Tag
+      <pre><code class="sh" data-trim="">
+git push "remote name" --tags
+      </code></pre>
+</li>
+</ul>
+</section>
+
         </section>
 
-        <section data-external="content/history.html">
+        <section><section id="history">
+<h2>History</h2>
+  現在我們有更多的紀錄了
+  <br/>
+  接下來來談使用哪些工具協助我們查看以往的記錄
+</section>
+<section>
+<h2>log</h2>
+  現在線圖比較複雜了
+  <br/>
+  就可以加入更多的工具來協助我們看git log
+</section>
+<section>
+<h2>log</h2>
+<pre><code class="sh" data-trim="">
+git log --decorate
+  </code></pre>
+<img alt="log" src="img/37_log.png"/>
+<br/>
+  標記各個指標目前所指向的位置
+</section>
+<section>
+<h2>log</h2>
+<pre><code class="sh" data-trim="">
+git log --all
+  </code></pre>
+<img alt="log2" src="img/38_log2.png"/>
+<br/>
+  列出所有分支的log
+  <br/>
+  上面的是master上的
+  <br/>
+  下面則是原本my-branch分支上的commit
+</section>
+<section>
+<h2>log</h2>
+<pre><code class="sh" data-trim="">
+git log --graph
+  </code></pre>
+<img alt="log3" src="img/39_log3.png"/>
+<br/>
+  在log旁邊加上輔助線，更清楚看分支的狀況
+</section>
+<section>
+<h2>log</h2>
+<small>
+    同時使用--graph, --all, --decorate就能看到我在branch章節用來解說用的結果
+    <br/>
+<img alt="log-3-argument" src="img/25_branch3.png"/>
+<br/>
+<br/>
+    也可以直接將這些參數alias到簡單的指令讓下次使用更輕鬆
+  </small>
+<pre>
+    <code class="sh" data-trim="">
+git config --global alias.lg "log --grpah --decorate --all"
+    </code>
+  </pre>
+</section>
+<section>
+<h2>log</h2>
+  除此之外我們也可以針對單一檔案做追蹤
+  <pre><code class="sh" data-trim="">
+  git log --follow "file name"
+  </code></pre>
+</section>
+<section>
+<h2>show</h2>
+  有時候會需要看某一個特定commit或tag的資訊
+  <br/>
+  這時候就能用上show
+  <pre><code class="sh" data-trim="">
+  git show "commit or tag"
+  </code></pre>
+</section>
+<section>
+<h2>show</h2>
+  另外一個很實用的功用是查看某個commit中的某個file
+  <pre><code class="sh" data-trim="">
+  git show "commit":"file name"
+  </code></pre>
+</section>
+
         </section>
 
-        <section data-external="content/stash.html">
+        <section><section id="stash">
+<h2>stash</h2>
+  有時候我們修改到一半，會突然要切換到其他分支<br/>
+  如果新的修改跟其他分支有衝突，git就會阻止我們<br/>
+  這時候除了commit外<br/>
+  還能用stash暫存目前的修改
+</section>
+<section>
+<h2>stash</h2>
+<small>假設我們已經在my-branch上加上"new content on my-branch"並且commit了</small>
+<img alt="stash2" src="img/42_stash2.png"/>
+<p class="fragment">
+<small>
+      這時候線圖看起來會是這樣的
+      <br/>
+      my-branch比master多了一個commit
+      <img alt="stash" src="img/41_stash.png"/>
+</small>
+</p>
+</section>
+<section>
+<h2>stash</h2>
+<small>
+    接著我們再對master上的hi.txt做一些修改
+    <img alt="stash3" src="img/43_stash3.png"/>
+<br/>
+    如果這時候要checkout到my-branch上
+  </small>
+<p class="fragment">
+<small>
+      git就會警告我們必須要先commit或stash
+    <img alt="stash4" src="img/44_stash4.png"/>
+</small>
+</p>
+<p class="fragment">
+<small>
+      但我們可能還沒有做到一個適合commit的階段
+      <br/>
+      這時候就能用stash暫存起來
+    </small>
+</p>
+</section>
+<section>
+<h2>stash</h2>
+  將檔案加入stash暫存
+  <pre><code class="sh" data-trim="">
+git stash
+  </code></pre>
+<img alt="stash5" src="img/45_stash5.png"/>
+<br/>
+<br/>
+<p class="fragment">
+    這時候hi.txt就會回到原本的狀態
+    <img alt="stash6" src="img/46_stash6.png"/>
+</p>
+</section>
+<section>
+<h2>stash</h2>
+  查看目前所有得stash
+  <pre><code class="sh" data-trim="">
+git stash list
+  </code></pre>
+<img alt="stash7" src="img/47_stash7.png"/>
+<small>這裡的stash@{0}就是之後要取回這個暫存使用的名稱</small>
+</section>
+<section>
+<h2>stash</h2>
+  取回暫存的狀態
+  <pre><code class="sh" data-trim="">
+git stash apply "stash name"
+  </code></pre>
+<small>
+    如果不指定stash name就會直接取回上一次的stash
+    <br/>
+</small>
+<p class="fragment">
+    這時候就能看到
+    <br/>
+    hi.txt又變成我們更改過後的狀態
+    <img alt="stash8" src="img/48_stash8.png"/>
+</p>
+</section>
+<section>
+<h2>stash</h2>
+  不過我們apply後，並不會把剛剛的暫存記錄刪除
+  <br/>
+  如果不用留著就可以把它刪掉了
+  <pre><code class="sh" data-trim="">
+git stash drop "stash name"
+  </code></pre>
+<small>
+    如果不指定stash name就會drop最上面的stash
+    <br/>
+</small>
+</section>
+
         </section>
 
-        <section data-external="content/rebase.html">
+        <section><section id="rebase">
+<h2>rebase</h2>
+  修改commit的history
+</section>
+<section>
+<h2>rebase</h2>
+  如果想看影片可以參考ihower的<br/>
+<a href="https://ihower.tw/blog/archives/6704" target="_blank">Git rebase 和 merge 合併操作示範錄影</a>
+<br/>
+  我也是從這學rebase的
+</section>
+<section>
+<h2>rebase</h2>
+<p class="fragment fade-out" data-fragment-index="0">
+    這裡只會介紹基本的interactive rebase
+  </p>
+<p class="fragment fade-in" data-fragment-index="0">
+<img alt="rebase" src="img/49_rebase.png"/>
+<small>
+      假設我們多了兩個commit<br/>
+      其中有一個commit只是修復打錯字<br/>
+      我們希望能把它整併進上一個commit
+    </small>
+</p>
+</section>
+<section>
+<h2>rebase</h2>
+<pre><code class="sh" data-trim="">
+git rebase -i "SHA1"
+  </code></pre>
+<small>找出SHA1這個commit以後（不包含這個commit）的commit進行rebase</small>
+<p class="fragment">
+<small>
+      接著就會進入rebase的互動介面<br/>
+      下面有說明可以進行哪些動作
+    </small>
+<img alt="rebase" src="img/50_rebase2.png"/>
+</p>
+</section>
+<section>
+<h2>rebase</h2>
+  假設我們只有要讓typo的commit整併到上一個commit
+  只要將pick改成f，並存檔<br/>
+<img alt="rebase3" src="img/51_rebase3.png"/>
+<br/>
+<br/>
+<p class="fragment">
+    再去看log就會發現typo這個commit不見了
+    <img alt="rebase4" src="img/52_rebase4.png"/>
+</p>
+</section>
+<section>
+<h2>rebase</h2>
+<small>
+    rebase甚至可以交換commit的順序
+    <br/>
+    只要在剛剛的interactive mode調換commit的順序
+    <br/>
+    就會更改在history中的順序
+    <br/>
+    不過要注意的是，如果這些commit有修改到同樣的檔案，可能會造成問題
+  </small>
+</section>
+<section>
+<h2>rebase</h2>
+  如果遇到conflict，可以用
+  <pre><code class="sh" data-trim="">
+git rebase --abort
+  </code></pre>
+  放棄這次的rebase
+</section>
+<section>
+<h2>Pull with rebase</h2>
+<pre><code class="sh" data-trim="">
+git pull --rebase
+  </code></pre>
+  它可避免pull遠端branch時，造成無謂的merge節點
+  <br/>
+<br/>
+  更詳細的介紹，請參考ihower的
+  <br/>
+<a href="https://ihower.tw/blog/archives/3843" target="_blank">使用 git rebase 避免無謂的 merge</a>
+</section>
+
         </section>
 
-        <section data-external="content/submodule.html">
+        <section><section id="submodule">
+<h2>submodule</h2>
+  有時候，在一個專案中，會用到其他專案的程式碼<br/>
+  但是將其他專案，又不應該被加入這個專案的版本庫<br/>
+  而且如果那個專案更新，我們就得要手動更新<br/>
+<br/>
+  這時候就能用submodule<br/>
+  在專案下，再加入另一個專案
+</section>
+<section>
+<h2>submodule</h2>
+<h4>加入submodule</h4>
+<pre><code class="sh" data-trim="">
+    git submodule add "repo url" "path"
+  </code></pre>
+<br/>
+<p class="fragment">
+    假設要把現在這份投影片的repo
+    <br/>
+    加入原本的專案
+    <img alt="submodule" src="img/53_submodule.png"/>
+</p>
+</section>
+<section>
+<h2>Submodule</h2>
+  現在看目前的status會發現增加了新的檔案
+  <img alt="submodule2" src="img/54_submodule2.png"/>
+<br/>
+  它們也必須被commit，git才會記錄加入submodule的操作
+</section>
+<section>
+<h2>Submodule</h2>
+  再來看看原本的專案和submodule的remote
+  <table class="reveal">
+<tr>
+<td>
+<img alt="submodule3" src="img/55_submodule3.png"/>
+</td>
+<td>
+<img alt="submodule4" src="img/56_submodule4.png"/>
+</td>
+</tr>
+</table>
+  它們各自有不同的remote，也能在不同的分支上
+  <br/>
+  因為它們確實是兩個不同的專案
+</section>
+<section>
+<h2>submodule</h2>
+<h4>pull所有submodule</h4>
+<pre><code class="sh" data-trim="">
+git submodule foreach --recursive git pull "remote name" "branch name"
+  </code></pre>
+<small>也可以進入submodule裡面進行一般的pull</small>
+<br/>
+<br/>
+<h4>連同submodule一起clone下來</h4>
+<pre><code class="Bash" data-trim="">
+    git clone --recursive "url"
+  </code></pre>
+</section>
+
         </section>
 
         <section id="useful_plugins">
@@ -241,28 +1676,28 @@ git show "tag name"
           <ol>
             <li>
               <a href="https://github.com/jonas/tig">tig</a>
-              <br />
+              <br/>
               <small>
                 ncurses based的git介面
               </small>
             </li>
             <li>
               <a href="https://github.com/tj/git-extras">git-extras</a>
-              <br />
+              <br/>
               <small>
                 擴充git基本的功能，我最常用ignore和ignore-io兩項功能
               </small>
             </li>
             <li>
               <a href="https://github.com/so-fancy/diff-so-fancy">diff-so-fancy</a>
-              <br />
+              <br/>
               <small>
                 美化git diff的訊息
               </small>
             </li>
             <li>
               <a href="https://github.com/github/hub">hub</a>
-              <br />
+              <br/>
               <small>GitHub提供的套件，增加了許多能跟GitHub整合的功能</small>
             </li>
           </ol>
@@ -320,5 +1755,6 @@ git show "tag name"
 				]
 			});
 		</script>
-	</body>
-</html>
+	
+
+</body></html>
