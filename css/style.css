@@ -1,14 +1,14 @@
 .reavel i {
-	font-family: 'FontAwesome';
-	font-style: normal;
+    font-family: 'FontAwesome';
+    font-style: normal;
 }
 
 .contact-me {
-	float:center;
+    float:center;
 }
 
 .reference li {
-	font-size: 16pt;
+    font-size: 16pt;
 }
 
 .absolute-pos-fragment {
@@ -19,6 +19,17 @@
     right: 0;
 }
 
+h1.no-upper,
+h2.no-upper,
+h3.no-upper,
+h4.no-upper,
+h5.no-upper,
+h6.no-upper {
+  text-transform: none;
+}
+
+/* about-me */
+
 #self-intro li {
     list-style: none;
 }
@@ -26,6 +37,7 @@
 #edu-and-experience td {
     vertical-align: top;
 }
+
 #edu-and-experience li {
     list-style: none;
     margin: 20px 0;
