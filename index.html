@@ -611,13 +611,16 @@ git commit --amend
             <pre><code class="sh" data-trim="">
           git diff a b
             </code></pre>
+            <br/>
 
             看modified的檔案和上一次commit的不同
             <pre><code class="sh" data-trim="">
           git diff
             </code></pre>
+            <br/>
 
             看unmodified的檔案和上一次commit的不同
+            <small>(建議在每一次add後commit前都要用，確認這次的commit是預期的)</small>
             <pre><code class="sh" data-trim="">
           git diff --staged
             </code></pre>
@@ -901,16 +904,16 @@ git mv "old name" "new name"
 
         <section><section id="branch">
 <h2>Branch</h2>
-<ul>
+<ul style="font-size: 80%">
 <li>Branch是git很重要的功能
       <ul>
 <li>想像成複製很多份同樣的code，各自做不同的修改</li>
-<li>通常可以用在測試或攥寫新功能的時候</li>
+<li>通常可以用在測試或攥寫新功能</li>
 </ul>
 </li>
-<li>也可以想像是解支線任務
+<li>可以想像是解支線任務
       <ul>
-<li>切出不同的支線解不同的任務，每一個支線都能有自己的存檔</li>
+<li>切出支線解不同的任務，每一個支線都能有自己的存檔</li>
 <li>最後再整併成主線的一部份(也可以不整併)</li>
 </ul>
 </li>
@@ -1027,13 +1030,15 @@ git branch -D "branch name"
 <section>
 <h2>Merge</h2>
 <img alt="branch6" src="img/28_branch6.png"/>
-<br/>
-  這時候merge，git就會告訴你內容有衝突
-  <br/>
+<small>
+    這時候merge，git就會告訴你內容有衝突
+  </small>
 <br/>
 <p class="fragment">
-    來看一下現在status長怎樣
-    <br/>
+<small>
+      來看一下現在status長怎樣
+    </small>
+<br/>
 <img alt="branch7" src="img/29_branch7.png" width="50%"/>
 <br/>
 <small>
@@ -1050,7 +1055,7 @@ git branch -D "branch name"
     <br/>
 <img alt="branch8" src="img/30_branch8.png"/>
 <br/>
-    從HEAD到===的內容就是HEAD(目前指向master)的內容
+    &lt;&lt;&lt;HEAD到===的內容就是HEAD(目前指向master)的內容
     <br/>
     下面則是my-branch的內容
   </small>
@@ -1081,7 +1086,7 @@ git branch -m "newname"
         <section>
           <section id="tag">
             <h2>tag</h2>
-            一般而言，可以拿來做標記發行的版本
+            一般來說，tag可以拿來做標記發行的版本
             <br/>
             或者也可以想成是標記特別重要的commit
           </section>
@@ -1126,9 +1131,9 @@ git show "tag name"
 <h2>What is <a href="https://github.com" target="_blank">github</a></h2>
 <ul>
 <li>可以將原始碼開放到網路上的網站</li>
-<li>很多很厲害的的open source project都來自這</li>
+<li>很多厲害的的open source project都來自這</li>
 <li>私有專案是要付費的<br/>
-      (需要私有專案可以試試看<a href="https://bitbucket.org" target="_blank">bitbucket</a>)</li>
+      (需要私有專案可以試試看<a href="https://bitbucket.org" target="_blank">bitbucket</a>或<a href="https://about.gitlab.com" target="_blank">gitlab</a>)</li>
 </ul>
 </section>
 <section>
@@ -1185,7 +1190,7 @@ git push -u "remote name" "branch name"
 <br/>
 <br/>
 <small class="fragment">
-    接著用git branch --all可以看到遠端的master分支已經存在了
+    接著用<code class="sh" data-trim="">git branch --all</code>可以看到遠端的master分支已經存在了
     <img alt="remote4" src="img/35_remote4.png"/>
 </small>
 </section>
@@ -1199,11 +1204,8 @@ git push --all
 <section>
 <h2>Credential</h2>
 <small>
-    push的時候會要求你輸入帳號密碼
-    <br/>
-    但每次都要輸入實在太麻煩了
+    每次push的時候會要輸入帳號密碼實在太麻煩了
   </small>
-<br/>
 <br/>
 <pre><code class="sh" data-trim="">
 git config --global credential.helper cache
@@ -1219,32 +1221,32 @@ git config --global credential.helper cache
   </small>
 </section>
 <section>
-<h2>What should be in a repo</h2>
+<h2 class="no-upper">What should be in a repo?</h2>
 <ul>
 <li>程式碼</li>
 <li>README.md
       <ul>
-<li>說明你的專案該如何使用</li>
+<li>說明專案該如何使用</li>
 <li>以markdown語法攥寫</li>
 <li>GitHub會自動去找readme，README等字眼，並建立出對應的說明文件</li>
-<li>GitHub自己有一套GitHub Favored Markdown</li>
+<li>GitHub使用的是GitHub Favored Markdown</li>
 </ul>
 </li>
+<li><a href="https://help.github.com/articles/licensing-a-repository/" target="_blank">LICENSE.txt</a></li>
 </ul>
 </section>
 <section>
-<h2>What shouldn't be in a repo?</h2>
+<h2 class="no-upper">What shouldn't be in a repo?</h2>
 <ul>
 <li>任何機密資料(e.g. 密碼)</li>
 <li>暫存檔(e.g. .swp, __pycacehe__)</li>
 <li>Binary檔</li>
-<li>執行檔</li>
 <li>很大的檔案（如果有必要，可以試試git-annex）</li>
 </ul>
 </section>
 <section>
 <h2>Clone</h2>
-  那麼上傳上去的專案，其他人又應該如何下載下來呢
+  那上傳上去的專案，其他人如何下載下來呢
 
   <pre><code class="sh" data-trim="">
 git clone "repo url"
@@ -1256,6 +1258,7 @@ git clone "repo url"
   <pre><code class="sh" data-trim="">
 git pull "remote name" "branch name"
   </code></pre>
+<small>建議在在每一次要開始寫code前，都進行pull，確保現在的程式碼是最新的</small>
 </section>
 <section>
 <h2>What did pull do?</h2>
@@ -1300,6 +1303,18 @@ git checkout "branch name"
       </code></pre>
 </li>
 <li>
+      Clone單一遠端分支
+      <pre><code class="sh" data-trim="">
+git clone "url" --branch "branch name" --single-branch "directory"
+      </code></pre>
+      如果不指定directory，就會clone到當前目錄
+    </li>
+</ul>
+</section>
+<section>
+<h2>Remote branch</h2>
+<ul>
+<li>
       刪除遠端分支
       <pre><code class="sh" data-trim="">
 git branch -d :"branch name"
@@ -1307,17 +1322,12 @@ git branch -d :"branch name"
 </li>
 <li>
       清理過時的遠端分支
+      <br/>
+      (在遠端已經被移除，本地端紀錄遠端分支存在)
       <pre><code class="sh" data-trim="">
 git remote prune "remote name"
       </code></pre>
 </li>
-<li>
-      Clone單一遠端分支
-      <pre><code class="sh" data-trim="">
-git clone "url" --branch "branch name" --single-branch "directory"
-      </code></pre>
-      如果不指定directory，就會clone到當前目錄
-    </li>
 </ul>
 </section>
 <section>
@@ -1340,15 +1350,13 @@ git push "remote name" --tags
 
         <section><section id="history">
 <h2>History</h2>
-  現在我們有更多的紀錄了
-  <br/>
   接下來來談使用哪些工具協助我們查看以往的記錄
 </section>
 <section>
 <h2>log</h2>
-  現在線圖比較複雜了
+  現在的log變得更複雜了
   <br/>
-  就可以加入更多的工具來協助我們看git log
+<code class="sh" data-trim="">git log</code> 有很多功能可以幫助我們容易理解log
 </section>
 <section>
 <h2>log</h2>
@@ -1368,9 +1376,9 @@ git log --all
 <br/>
   列出所有分支的log
   <br/>
-  上面的是master上的
+  85f3的是master上的commit
   <br/>
-  下面則是原本my-branch分支上的commit
+  88d0則是原本my-branch分支上的
 </section>
 <section>
 <h2>log</h2>
@@ -1415,7 +1423,7 @@ git config --global alias.lg "log --grpah --decorate --all"
 </section>
 <section>
 <h2>show</h2>
-  另外一個很實用的功用是查看某個commit中的某個file
+  另外一個很功能是是查看某個commit中的某個檔案
   <pre><code class="sh" data-trim="">
   git show "commit":"file name"
   </code></pre>
@@ -1425,7 +1433,7 @@ git config --global alias.lg "log --grpah --decorate --all"
 
         <section><section id="stash">
 <h2>stash</h2>
-  有時候我們修改到一半，會突然要切換到其他分支<br/>
+  有時候修改到一半，突然想要切換到其他分支<br/>
   如果新的修改跟其他分支有衝突，git就會阻止我們<br/>
   這時候除了commit外<br/>
   還能用stash暫存目前的修改
@@ -1481,7 +1489,7 @@ git stash
 </section>
 <section>
 <h2>stash</h2>
-  查看目前所有得stash
+  查看目前所有的stash
   <pre><code class="sh" data-trim="">
 git stash list
   </code></pre>
@@ -1524,6 +1532,13 @@ git stash drop "stash name"
         <section><section id="rebase">
 <h2>rebase</h2>
   修改commit的history
+  <br/>
+<br/>
+  需要注意的是rebase是有點危險的指令
+  <br/>
+  有可能造成不太容易回復的後果
+  <br/>
+  請謹慎使用
 </section>
 <section>
 <h2>rebase</h2>
@@ -1609,8 +1624,8 @@ git pull --rebase
 
         <section><section id="submodule">
 <h2>submodule</h2>
-  有時候，在一個專案中，會用到其他專案的程式碼<br/>
-  但是將其他專案，又不應該被加入這個專案的版本庫<br/>
+  有時候一個專案中，會用到其他專案的程式碼<br/>
+  但是其他專案，又不應該被加入這個專案的版本庫<br/>
   而且如果那個專案更新，我們就得要手動更新<br/>
 <br/>
   這時候就能用submodule<br/>
@@ -1620,7 +1635,7 @@ git pull --rebase
 <h2>submodule</h2>
 <h4>加入submodule</h4>
 <pre><code class="sh" data-trim="">
-    git submodule add "repo url" "path"
+    git submodule add "repo url" "some path"
   </code></pre>
 <br/>
 <p class="fragment">
