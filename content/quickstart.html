@@ -69,9 +69,9 @@ git st
   <br />
   <ol start=0>
     <li><p style="display: inline; color: red">untracked</p> (新的檔案，還沒加入git中)</li>
-    <li><p style="display: inline; color: green">unmodified</p> (完成add，但還沒commit)</li>
+    <li><p style="display: inline; color: green">staged</p> (完成add，但還沒commit)</li>
     <li><p style="display: inline; color: red">modified</p> (add完後又做了修改)</li>
-    <li><p style="display: inline; color: green">staged</p> (commit完成，到這個階段就已經完成紀錄)</li>
+    <li><p style="display: inline; color: green">unmodified</p> (commit完成，到這個階段就完成紀錄了)</li>
   </ol>
   <br />
   <br />
@@ -79,7 +79,7 @@ git st
 </section>
 
 <section>
-  <h2>Stage 3 - staged</h2>
+  <h2>Stage 3 - unmodified</h2>
 
   所有的東西目前都已經加入git (因為還沒有東西)
   <img src="img/3_st.png" alt="st"/>
@@ -96,7 +96,7 @@ git st
 </section>
 
 <section>
-  <h2>Stage 1 - unmodified</h2>
+  <h2>Stage 1 - staged</h2>
   將新的檔案加入git
 
   <pre><code class="sh" data-trim>
@@ -114,7 +114,7 @@ git add "file name"
 </section>
 
 <section>
-  <h2>Stage 1 - unmodified</h2>
+  <h2>Stage 1 - staged</h2>
 
   <pre><code class="sh" data-trim>
 git add .
@@ -129,8 +129,8 @@ git add .
 </section>
 
 <section>
-  <h2>Stage 3 - staged</h2>
-  <small>讓剛剛的檔案進入staged階段吧，之後這個檔案就會一直被記錄在git</small>
+  <h2>Stage 3 - unmodified</h2>
+  <small>讓剛剛的檔案進入unmodified階段吧，之後這個檔案就會一直被記錄在git</small>
 
   <pre><code class="sh" data-trim>
 git commit
